@@ -80,17 +80,13 @@ const tempData=[
     }
 ]
 
-const Events = () => {
-
-    const [selectedEvent, setSelectedEvent] = useState({});
-
-
-  return (
-    <div className={styles.container}>
-        <Particle />
-        <div style={{position: "absolute"}}>
-            <Navbar />
-        </div>
+const EventList = ()=>{
+    const [state, setState] = useState({});
+    const handleState = (e)=>{
+        setState(e);
+        // setSelectedEvent(e);
+    }
+    return(
         <div className={styles.wrapper}>
             <div className={styles.event_list}>
                 <h1>Aktif Etkinlikler</h1>
@@ -102,13 +98,13 @@ const Events = () => {
                                 <div className={styles.single_event} key={ele.id}>
                                     <p 
                                         onClick={()=>{
-                                            if(ele.id === selectedEvent.id){
-                                                setSelectedEvent({})
+                                            if(ele.id === state.id){
+                                                handleState({})
                                             }else{
-                                                setSelectedEvent(ele);
+                                                handleState(ele);
                                             }
                                         }} 
-                                        style={selectedEvent.id === ele.id ? {fontWeight: 600}: {fontWeight: 300}}
+                                        style={state.id === ele.id ? {fontWeight: 600}: {fontWeight: 300}}
                                     >
                                         {ele.Name}
                                     </p>
@@ -123,35 +119,49 @@ const Events = () => {
             </div>
             <div className={styles.event_info}>
                 {
-                    selectedEvent.Name ? 
+                    state.Name ? 
                     <div className={styles.event_info_container}>
                         <h1>Etkinlik Bilgisi</h1>
                         <div className={styles.event_info_infos}>
                             <div className={styles.single_info}>
                                 <p className={styles.name_of_the_info}>Etkinlik Adı:</p>
-                                <p className={styles.field_of_the_info}>{selectedEvent.Name}</p>
+                                <p className={styles.field_of_the_info}>{state.Name}</p>
                             </div>
                             <div className={styles.single_info}>
                                 <p className={styles.name_of_the_info}>Etkinlik Yeri:</p>
-                                <p className={styles.field_of_the_info}>{selectedEvent.Place}</p>
+                                <p className={styles.field_of_the_info}>{state.Place}</p>
                             </div>
                             <div className={styles.single_info}>
                                 <p className={styles.name_of_the_info}>Etkinlik Tarihi:</p>
-                                <p className={styles.field_of_the_info}>{selectedEvent.Date}</p>
+                                <p className={styles.field_of_the_info}>{state.Date}</p>
                             </div>
                             <div className={styles.description}>
                                 <p className={styles.name_of_the_info}>Etkinlik Açıklaması</p>
-                                <p className={styles.field_of_the_info}>{selectedEvent.Description}</p>
+                                <p className={styles.field_of_the_info}>{state.Description}</p>
                             </div>
                         </div>
                     </div>
                     :
-                    <div>
-                        dsgsdfg
+                    <div className={styles.event_info_container}>
+                        <h1>Etkinlik Bilgisi</h1>
                     </div>
                 }
             </div>
         </div>
+    )
+}
+
+const Events = () => {
+
+    // const [selectedEvent, setSelectedEvent] = useState({});
+
+  return (
+    <div className={styles.container}>
+        <Particle />
+        <div style={{position: "absolute"}}>
+            <Navbar />
+        </div>
+        <EventList />
     </div>
   )
 }
