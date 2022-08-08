@@ -9,7 +9,7 @@ const JoditEditor = dynamic(importJodit, {
 });
 
 
-export default function MyEditor() {
+export default function MyEditor({setState}) {
     const editor = useRef(null)
 	const [content, setContent] = useState('')
 
@@ -18,6 +18,12 @@ export default function MyEditor() {
 		placeholder: "" || 'Bir şeyler yazın...'
 	}}, [])
 
+    const handleChange = (e)=>{
+        setContent(e);
+        setState(e);
+        console.log(e);
+    }
+
 	return (
         <>
             <JoditEditor
@@ -25,12 +31,11 @@ export default function MyEditor() {
                 value={content}
                 config={config}
                 tabIndex={1} // tabIndex of textarea
-                onBlur={newContent => setContent(newContent)} // preferred to use only this option to update the content for performance reasons
-                onChange={newContent => {console.log(newContent)}}
+                onBlur={handleChange} // preferred to use only this option to update the content for performance reasons
             />
-            <div dangerouslySetInnerHTML={{__html: content}}>
+            {/* <div dangerouslySetInnerHTML={{__html: content}}>
 
-            </div>
+            </div> */}
         </>
         );
   }
