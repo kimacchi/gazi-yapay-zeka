@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+.container{
+    .wrapper{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        .users{
+            width: 25vw;
+            height: 90vh;
+            border-radius: 2vh;
+            border: 4px solid #EEC801;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h1{
+                width: 20vw;
+                text-align: center;
+                border-bottom: 1px solid white;
+                padding-bottom: 1vw;
+                font-family: "Work Sans";
+                font-weight: 400;
+            }
+            .user_list{
+                height: 75.5vh;
+                overflow-y: auto;
+                width: 24.2vw;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                p{
+                    font-family: "Inter";
+                    cursor: pointer;
+                }
+            }
+        }
+        .events{
+            width: 25vw;
+            height: 90vh;
+            border-radius: 2vh;
+            border: 4px solid #EEC801;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h1{
+                width: 20vw;
+                text-align: center;
+                border-bottom: 1px solid white;
+                padding-bottom: 1vw;
+                font-family: "Work Sans";
+                font-weight: 400;
+            }
+            .event_list{
+                height: 75.5vh;
+                overflow-y: auto;
+                width: 24.2vw;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                p{
+                    font-family: "Inter";
+                    cursor: pointer;
+                }
+            }
+        }
+        .new_event{
+            width: 25vw;
+            height: 90vh;
+            border-radius: 2vh;
+            border: 4px solid #EEC801;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h1{
+                width: 20vw;
+                text-align: center;
+                border-bottom: 1px solid white;
+                padding-bottom: 1vw;
+                font-family: "Work Sans";
+                font-weight: 400;
+            }
+            .text_field_wrapper{
+                height: 75.5vh;
+                overflow-y: auto;
+                width: 25vw;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+                .text_field{
+                    width: 22vw;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 850px){
+    .container{
+        .wrapper{
+            width: 100%;
+            height: 272vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            .users{
+                width: 75vw;
+                height: 80vh;
+                border-radius: 2vh;
+                border: 4px solid #EEC801;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                h1{
+                    width: 60vw;
+                    text-align: center;
+                    border-bottom: 1px solid white;
+                    padding-bottom: 1vw;
+                    font-family: "Work Sans";
+                    font-weight: 400;
+                }
+                .user_list{
+                    height: 75.5vh;
+                    overflow-y: auto;
+                    width: 74.2vw;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    p{
+                        font-family: "Inter";
+                        cursor: pointer;
+                        font-size: 20px;
+                        margin-bottom: 3vh;
+                        font-weight: 200;
+                    }
+                }
+            }
+            .events{
+                width: 75vw;
+                height: 90vh;
+                border-radius: 2vh;
+                border: 4px solid #EEC801;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                h1{
+                    width: 60vw;
+                    text-align: center;
+                    border-bottom: 1px solid white;
+                    padding-bottom: 1vw;
+                    font-family: "Work Sans";
+                    font-weight: 400;
+                }
+                .event_list{
+                    height: 75.5vh;
+                    overflow-y: auto;
+                    width: 74.2vw;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    p{
+                        font-family: "Inter";
+                        cursor: pointer;
+                        font-size: 20px;
+                        margin-bottom: 3vh;
+                        font-weight: 200;
+                    }
+                }
+            }
+            .new_event{
+                width: 75vw;
+                height: 90vh;
+                border-radius: 2vh;
+                border: 4px solid #EEC801;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                h1{
+                    width: 60vw;
+                    text-align: center;
+                    border-bottom: 1px solid white;
+                    padding-bottom: 1vw;
+                    font-family: "Work Sans";
+                    font-weight: 400;
+                }
+                .text_field_wrapper{
+                    height: 75.5vh;
+                    overflow-y: auto;
+                    width: 75vw;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-around;
+                    .text_field{
+                        width: 65vw;
+                    }
+                }
+            }
+        }
+    }
+}
