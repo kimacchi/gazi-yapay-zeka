@@ -10,6 +10,7 @@ import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
 import { MobileDatePicker } from '@mui/x-date-pickers';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
+import { v4 as uuid } from 'uuid';
 
 const theme = createTheme({
     palette: {
@@ -326,7 +327,7 @@ const AdminComp = ()=>{
                             return(
                                 <p
                                     onClick={()=>{setSelectedUser(ele); setUserOpen(true)}}
-                                    key={ele.id}
+                                    key={uuid()}
                                 >
                                     {ele.Name}
                                 </p>
@@ -344,6 +345,7 @@ const AdminComp = ()=>{
                             return(
                                 <p
                                     onClick={()=>{setSelectedEvent(ele); setEventOpen(true)}}
+                                    key={uuid()}
                                 >
                                     {ele.Name}
                                 </p>
@@ -452,7 +454,7 @@ const AdminComp = ()=>{
                                         selectedEvent.Participants.length ?
                                             selectedEvent.Participants.map((ele)=>{
                                                 return(
-                                                    <p key={ele.id}>{ele.Name} - {ele.SchoolNo}</p>
+                                                    <p key={uuid()} >{ele.Name} - {ele.SchoolNo}</p>
                                                 )
                                             })
                                         :
