@@ -63,8 +63,8 @@ const events=[
         Place: "Gazi Üniversitesi Ana Kampüs",
         Date: "21 Ağustos saat 15.30'da",
         DeadLine: new Date(),
-        Description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar ipsum, scelerisque ornare leo in eu pellentesque. Elementum scelerisque praesent sit ipsum at. Arcu arcu quis lacus commodo. Nulla bibendum semper tempor, praesent et. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar ipsum, scelerisque ornare leo in eu pellentesque. Elementum scelerisque praesent sit ipsum at. Arcu arcu quis lacus commodo. Nulla bibendum semper tempor, praesent et. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar ipsum, scelerisque ornare leo in eu pellentesque. Elementum scelerisque praesent sit ipsum at. Arcu arcu quis lacus commodo. Nulla bibendum semper tempor, praesent et. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar ipsum, scelerisque ornare leo in eu pellentesque. Elementum scelerisque praesent sit ipsum at. Arcu arcu quis lacus commodo. Nulla bibendum semper tempor, praesent et."
-
+        Description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar ipsum, scelerisque ornare leo in eu pellentesque. Elementum scelerisque praesent sit ipsum at. Arcu arcu quis lacus commodo. Nulla bibendum semper tempor, praesent et. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar ipsum, scelerisque ornare leo in eu pellentesque. Elementum scelerisque praesent sit ipsum at. Arcu arcu quis lacus commodo. Nulla bibendum semper tempor, praesent et. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar ipsum, scelerisque ornare leo in eu pellentesque. Elementum scelerisque praesent sit ipsum at. Arcu arcu quis lacus commodo. Nulla bibendum semper tempor, praesent et. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar ipsum, scelerisque ornare leo in eu pellentesque. Elementum scelerisque praesent sit ipsum at. Arcu arcu quis lacus commodo. Nulla bibendum semper tempor, praesent et.",
+        Participants: []
     },
     {
         id:"2",
@@ -72,6 +72,21 @@ const events=[
         Place: "Gazi Üniversitesi Ana Kampüs",
         Date: "21 Ağustos saat 15.30'da",
         DeadLine: new Date(),
+        Participants: [
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+        ],
         Description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar ipsum, scelerisque ornare leo in eu pellentesque. Elementum scelerisque praesent sit ipsum at. Arcu arcu quis lacus commodo. Nulla bibendum semper tempor, praesent et."
     },
     {
@@ -80,6 +95,21 @@ const events=[
         Place: "Gazi Üniversitesi Ana Kampüs",
         Date: "21 Ağustos saat 15.30'da",
         DeadLine: new Date(),
+        Participants: [
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+        ],
         Description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar ipsum, scelerisque ornare leo in eu pellentesque. Elementum scelerisque praesent sit ipsum at. Arcu arcu quis lacus commodo. Nulla bibendum semper tempor, praesent et."
     },
     {
@@ -88,6 +118,21 @@ const events=[
         Place: "Gazi Üniversitesi Ana Kampüs",
         Date: "21 Ağustos saat 15.30'da",
         DeadLine: new Date(),
+        Participants: [
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+        ],
         Description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar ipsum, scelerisque ornare leo in eu pellentesque. Elementum scelerisque praesent sit ipsum at. Arcu arcu quis lacus commodo. Nulla bibendum semper tempor, praesent et."
     },
     {
@@ -96,6 +141,21 @@ const events=[
         Place: "Gazi Üniversitesi Ana Kampüs",
         Date: "21 Ağustos saat 15.30'da",
         DeadLine: new Date(),
+        Participants: [
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+        ],
         Description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar ipsum, scelerisque ornare leo in eu pellentesque. Elementum scelerisque praesent sit ipsum at. Arcu arcu quis lacus commodo. Nulla bibendum semper tempor, praesent et."
     },
     {
@@ -104,6 +164,21 @@ const events=[
         Place: "Gazi Üniversitesi Ana Kampüs",
         Date: "21 Ağustos saat 15.30'da",
         DeadLine: new Date(),
+        Participants: [
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+        ],
         Description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar ipsum, scelerisque ornare leo in eu pellentesque. Elementum scelerisque praesent sit ipsum at. Arcu arcu quis lacus commodo. Nulla bibendum semper tempor, praesent et."
     },
     {
@@ -112,6 +187,21 @@ const events=[
         Place: "Gazi Üniversitesi Ana Kampüs",
         Date: "21 Ağustos saat 15.30'da",
         DeadLine: new Date(),
+        Participants: [
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+        ],
         Description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar ipsum, scelerisque ornare leo in eu pellentesque. Elementum scelerisque praesent sit ipsum at. Arcu arcu quis lacus commodo. Nulla bibendum semper tempor, praesent et."
     },
     {
@@ -120,6 +210,21 @@ const events=[
         Place: "Gazi Üniversitesi Ana Kampüs",
         Date: "21 Ağustos saat 15.30'da",
         DeadLine: new Date(),
+        Participants: [
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+        ],
         Description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar ipsum, scelerisque ornare leo in eu pellentesque. Elementum scelerisque praesent sit ipsum at. Arcu arcu quis lacus commodo. Nulla bibendum semper tempor, praesent et."
     },
     {
@@ -128,6 +233,21 @@ const events=[
         Place: "Gazi Üniversitesi Ana Kampüs",
         Date: "21 Ağustos saat 15.30'da",
         DeadLine: new Date(),
+        Participants: [
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+            {Name: "Ahmet Ergül", SchoolNo: "21118080045", id: "1"},
+        ],
         Description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar ipsum, scelerisque ornare leo in eu pellentesque. Elementum scelerisque praesent sit ipsum at. Arcu arcu quis lacus commodo. Nulla bibendum semper tempor, praesent et."
     }
 ]
@@ -183,6 +303,13 @@ const AdminComp = ()=>{
         }
     })
 
+    const [selectedEvent, setSelectedEvent] = useState({});
+    
+    const [selectedUser, setSelectedUser] = useState({});
+
+    const [userOpen, setUserOpen] = useState(false);
+    const [eventOpen, setEventOpen] = useState(false);
+
     const [eventName, setEventName] = useState("");
     const [eventPlace, setEventPlace] = useState("");
     const [eventDate, setEventDate] = useState("");
@@ -197,7 +324,12 @@ const AdminComp = ()=>{
                     {
                         users.map((ele)=>{
                             return(
-                                <p>{ele.Name}</p>
+                                <p
+                                    onClick={()=>{setSelectedUser(ele); setUserOpen(true)}}
+                                    key={ele.id}
+                                >
+                                    {ele.Name}
+                                </p>
                             )
                         })
                     }
@@ -210,7 +342,11 @@ const AdminComp = ()=>{
                     {
                         events.map((ele)=>{
                             return(
-                                <p>{ele.Name}</p>
+                                <p
+                                    onClick={()=>{setSelectedEvent(ele); setEventOpen(true)}}
+                                >
+                                    {ele.Name}
+                                </p>
                             )
                         })
                     }
@@ -290,6 +426,47 @@ const AdminComp = ()=>{
                     <Button variant="outlined">OLUŞTUR</Button>
                 </div>
             </div>
+
+            <Modal
+                open={userOpen}
+                onClose={()=>{setUserOpen(false); setSelectedUser({}); }}
+            >
+                <div>
+
+                </div>
+            </Modal>
+
+            <Modal
+                open={eventOpen}
+                onClose={()=>{setEventOpen(false); setSelectedEvent({}); console.log(selectedEvent)}}
+            >
+                <div className={styles.event_modal}>
+                    <h1>Etkinliğe Katılanlar</h1>
+                    <div className={styles.event_modal_list}>
+                        {
+                            
+                            selectedEvent.Participants ?
+                                <div className={styles.inner_list}>
+                                    
+                                    {
+                                        selectedEvent.Participants.length ?
+                                            selectedEvent.Participants.map((ele)=>{
+                                                return(
+                                                    <p key={ele.id}>{ele.Name} - {ele.SchoolNo}</p>
+                                                )
+                                            })
+                                        :
+                                        <p>Hiç katılımcı yok.</p>
+                                    }
+                                </div>
+
+                                :
+
+                                <div>Hiç katılımcı yok.</div>
+                        }
+                    </div>
+                </div>
+            </Modal>
         </div>
     )
 }

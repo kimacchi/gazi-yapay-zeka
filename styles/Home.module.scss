@@ -361,6 +361,54 @@
   }
 }
 
+.admin_card_section{
+  h1{
+    font-family: "Inter";
+    font-weight: 400;
+    margin-bottom: 4vw;
+  }
+  .admin_card_section_kurucu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5vw;
+    .cards{
+      width: 73vw;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  .admin_card_section_yonetici{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5vw;
+    .cards{
+      width: 73vw;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  .admin_card_section_yetkili{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5vw;
+    .cards{
+      width: 73vw;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      div{
+        margin-bottom: 1vw;
+      }
+    }
+  }
+}
+
 @media only screen and (max-width: 850px){
   .main{
     display: flex;
@@ -709,6 +757,64 @@
         color: white;
         font-weight: 400;
         padding-bottom: 4vh;
+      }
+    }
+  }
+  .admin_card_section{
+    h1{
+      font-family: "Inter";
+      font-weight: 400;
+      margin-bottom: 4vw;
+    }
+    .admin_card_section_kurucu{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 5vw;
+      .cards{
+        width: 73vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        justify-content: center;
+        div{
+          margin-bottom: 2vh;
+        }
+      }
+    }
+    .admin_card_section_yonetici{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 5vw;
+      .cards{
+        width: 73vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        justify-content: center;
+        div{
+          margin-bottom: 2vh;
+        }
+      }
+    }
+    .admin_card_section_yetkili{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 5vw;
+      .cards{
+        width: 73vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        justify-content: center;
+        div{
+          margin-bottom: 2vh;
+        }
       }
     }
   }

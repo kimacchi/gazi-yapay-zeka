@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+.admincard {
+    width: 270px;
+    height: 380px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    font-family: "Comfortaa", cursive;
+    font-size: 12px;
+  }
+  
+  .admincard__img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  .admincard .img {
+    display: block;
+  }
+  .admincard:hover .admincard__img{
+    background-color: black;
+  }
+  .admincard:hover .img{
+    opacity: 0.5;
+  }
+  
+  .admincard__info {
+    position: absolute;
+    bottom: -40%;
+    right: 4%;
+    transition: all 0.4s ease;
+    text-align: right;
+    color: #efefef;
+  }
+  
+  .admincard:hover {
+    border-right: 4px solid #0096ff;
+    border-bottom: 4px solid #0096ff;
+    background-color: #00000067;
+    transition: all 0.2s ease;
+  }
+  
+  .admincard:hover > .admincard__info {
+    bottom: 2%;
+    transition: all 0.4s ease;
+  }
+  
+  @media (max-width: 800px) {
+    .admincard {
+      width: 220px;
+      height: 300px;
+    }
+    .admincard__info h2 {
+      font-size: 1rem;
+    }
+  }
+  

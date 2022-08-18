@@ -18,9 +18,11 @@ const PostEditor = ()=>{
     const [category, setCategory] = useState("");
     const [sum, setSum] = useState("");
     const [content, setContent] = useState("");
+    const [imgLink, setImgLink] = useState("");
     return(
         <div className={styles.new_post_wrapper}>
             <h1>Yeni Haber Oluştur</h1>
+            
             <ThemeProvider theme={theme}>
                 <TextField 
                     variant="outlined" 
@@ -38,6 +40,16 @@ const PostEditor = ()=>{
                     size="small" 
                     value={category}
                     onChange={(e)=>{setCategory(e.target.value)}}
+                    className={styles.text_field}
+                />
+            </ThemeProvider>
+            <ThemeProvider theme={theme}>
+                <TextField 
+                    variant="outlined" 
+                    label="Haber Görsel Linki" 
+                    size="small" 
+                    value={imgLink}
+                    onChange={(e)=>{setImgLink(e.target.value)}}
                     className={styles.text_field}
                 />
             </ThemeProvider>
