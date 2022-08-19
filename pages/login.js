@@ -54,6 +54,11 @@ const LoginComponent =  ({onTypeChange= ()=>{}})=>{
 
 const RegisterComponent =  ({onTypeChange})=>{
     const [type, setType] = useState(false);
+    const [password, setPassword] = useState("");
+    const [email, setEmail] = useState("");
+    const [schoolNo, setSchoolNo] = useState("");
+    const [phoneNo, setPhoneNo] = useState("");
+    const [name, setName] = useState("");
 
     const typeHandler = ()=>{
         setType(true);
@@ -65,7 +70,7 @@ const RegisterComponent =  ({onTypeChange})=>{
                 <p className={styles.gradient}>Yapay Zeka Topluluğu</p>
                 <div className={styles.register__wrapper_input_container}>
                     <CustomInput 
-                        onValueChange={(e)=>{setEmail(e)}}
+                        onValueChange={(e)=>{setName(e)}}
                         type="text"
                         label="İsim Soyisim"
                     />
@@ -80,10 +85,17 @@ const RegisterComponent =  ({onTypeChange})=>{
                         label="Şifre"
                     />
                     <CustomInput 
-                        onValueChange={(e)=>{setEmail(e)}}
+                        onValueChange={(e)=>{setSchoolNo(e)}}
                         type="text"
                         label="Öğrenci no"
                     />
+                    
+                    <CustomInput 
+                        onValueChange={(e)=>{setPhoneNo(e)}}
+                        type="text"
+                        label="Telefon no"
+                    />
+                    
                 </div>
                 <div className={styles.utility_container}>
                     <p onClick={typeHandler}>Hesabın yok mu? <strong>Kayıt ol.</strong></p>
