@@ -191,20 +191,20 @@ export default function Home() {
               <Card 
                 admin={
                   {
-                    name:"Yakup Can Özdemir", 
-                    image:"yakupcanozdemir", 
-                    linkedin: "https://www.linkedin.com/in/yakup-%C3%B6zdemir-ab9216224/", 
-                    job: "Dış İlişkilerden Sorumlu Başkan Yardımcısı",
+                    name:"Ümitcan Zanbak", 
+                    image:"umitcanzanbak", 
+                    linkedin: "https://www.linkedin.com/in/%C3%BCmitcan-zanbak-0745a11b3/", 
+                    job: "İç İlişkilerden Sorumlu Başkan Yardımcısı",
                     sum: ""
                   }}
               />
               <Card 
                 admin={
                   {
-                    name:"Ümitcan Zanbak", 
-                    image:"umitcanzanbak", 
-                    linkedin: "https://www.linkedin.com/in/%C3%BCmitcan-zanbak-0745a11b3/", 
-                    job: "İç İlişkilerden Sorumlu Başkan Yardımcısı",
+                    name:"Yakup Can Özdemir", 
+                    image:"yakupcanozdemir", 
+                    linkedin: "https://www.linkedin.com/in/yakup-%C3%B6zdemir-ab9216224/", 
+                    job: "Dış İlişkilerden Sorumlu Başkan Yardımcısı",
                     sum: ""
                   }}
               />
@@ -223,96 +223,103 @@ export default function Home() {
           <div className={styles.admin_card_section_yetkili}>
             <h1>İdari Kurul</h1>
             <div className={styles.cards}>
-              <Card 
-                admin={
-                  {
-                    name:"Mert Aydoğan", 
-                    image:"mertaydogan", 
-                    linkedin: "https://www.linkedin.com/in/mert-aydo%C4%9Fan-2a42a4213/", 
-                    job: "Makine Öğrenmesi Komite Başkanı",
-                    sum: ""
-                  }}
-              />
-              <Card 
-                admin={
-                  {
-                    name:"Ümit Emre İlhan", 
-                    image:"umitemreilhan", 
-                    linkedin: "https://www.linkedin.com/in/%C3%BCmit-emre-ilhan-791b93209/", 
-                    job: "Makine Öğrenmesi Komite Başkan Yardımcısı",
-                    sum: ""
-                  }}
-              />
-              <Card 
-                admin={
-                  {
-                    name:"Ebru Nur Uslu", 
-                    image:"ebrunuruslu", 
-                    linkedin: "https://www.linkedin.com/in/ebru-nur-u-a60163210/", 
-                    job: "Makine Öğrenmesi Komitesi Proje Sorumlusu",
-                    sum: ""
-                  }}
-              />
-              <Card 
-                admin={
-                  {
-                    name:"Simge Arslan", 
-                    image:"simgearslan", 
-                    linkedin: "https://www.linkedin.com/in/simge-arslan-118947240/", 
-                    job: "Makine Öğrenmesi Komitesi Proje Sorumlusu",
-                    sum: ""
-                  }}
-              />
-              <Card 
-                admin={
-                  {
-                    name:"Buğra Burak Başer", 
-                    image:"bugraburakbaser", 
-                    linkedin: "https://www.linkedin.com/in/bu%C4%9Fra-burak-ba%C5%9Fer-679b0523b/", 
-                    job: "Makine Öğrenmesi Komitesi Sosyal Medya Sorumlusu",
-                    sum: ""
-                  }}
-              />
-              <Card 
-                admin={
-                  {
-                    name:"Kubilay Küçük", 
-                    image:"kubilaykucuk", 
-                    linkedin: "https://www.linkedin.com/in/kubilay-k%C3%BC%C3%A7%C3%BCk-160689225/", 
-                    job: "Derin Öğrenme Komitesi Başkanı",
-                    sum: ""
-                  }}
-              />
-              <Card 
-                admin={
-                  {
-                    name:"Yusuf Erkan", 
-                    image:"yusuferkan", 
-                    linkedin: "https://www.linkedin.com/in/yusuf-erkan-645348241/", 
-                    job: "Derin Öğrenme Komitesi Başkan Yardımcısı",
-                    sum: ""
-                  }}
-              />
-              <Card 
-                admin={
-                  {
-                    name:"Mehmet Murat Köse", 
-                    image:"mehmetmuratkose", 
-                    linkedin: "https://www.linkedin.com/in/mehmet-murat-kose/", 
-                    job: "Derin Öğrenme Komitesi Proje Sorumlusu",
-                    sum: ""
-                  }}
-              />
-              <Card 
-                admin={
-                  {
-                    name:"Samet Sarper Dinç", 
-                    image:"sametsarperdinc", 
-                    linkedin: "https://www.linkedin.com/in/samet-sarper-din%C3%A7-7a8677228/", 
-                    job: "Derin Öğrenme Komitesi Proje Sorumlusu",
-                    sum: ""
-                  }}
-              />
+              <div className={styles.first_cards}>
+                <Card 
+                  admin={
+                    {
+                      name:"Mert Aydoğan", 
+                      image:"mertaydogan", 
+                      linkedin: "https://www.linkedin.com/in/mert-aydo%C4%9Fan-2a42a4213/", 
+                      job: "Makine Öğrenmesi Komite Başkanı",
+                      sum: ""
+                    }}
+                />
+                <Card 
+                  admin={
+                    {
+                      name:"Ümit Emre İlhan", 
+                      image:"umitemreilhan", 
+                      linkedin: "https://www.linkedin.com/in/%C3%BCmit-emre-ilhan-791b93209/", 
+                      job: "Makine Öğrenmesi Komite Başkan Yardımcısı",
+                      sum: ""
+                    }}
+                />
+                <Card 
+                  admin={
+                    {
+                      name:"Ebru Nur Uslu", 
+                      image:"ebrunuruslu", 
+                      linkedin: "https://www.linkedin.com/in/ebru-nur-u-a60163210/", 
+                      job: "Makine Öğrenmesi Komitesi Proje Sorumlusu",
+                      sum: ""
+                    }}
+                />
+                <Card 
+                  admin={
+                    {
+                      name:"Simge Arslan", 
+                      image:"simgearslan", 
+                      linkedin: "https://www.linkedin.com/in/simge-arslan-118947240/", 
+                      job: "Makine Öğrenmesi Komitesi Proje Sorumlusu",
+                      sum: ""
+                    }}
+                />
+                <Card 
+                  admin={
+                    {
+                      name:"Buğra Burak Başer", 
+                      image:"bugraburakbaser", 
+                      linkedin: "https://www.linkedin.com/in/bu%C4%9Fra-burak-ba%C5%9Fer-679b0523b/", 
+                      job: "Makine Öğrenmesi Komitesi Sosyal Medya Sorumlusu",
+                      sum: ""
+                    }}
+                />
+              </div>
+              
+              <div className={styles.second_cards}>
+                <Card 
+                  admin={
+                    {
+                      name:"Kubilay Küçük", 
+                      image:"kubilaykucuk", 
+                      linkedin: "https://www.linkedin.com/in/kubilay-k%C3%BC%C3%A7%C3%BCk-160689225/", 
+                      job: "Derin Öğrenme Komitesi Başkanı",
+                      sum: ""
+                    }}
+                />
+                <Card 
+                  admin={
+                    {
+                      name:"Yusuf Erkan", 
+                      image:"yusuferkan", 
+                      linkedin: "https://www.linkedin.com/in/yusuf-erkan-645348241/", 
+                      job: "Derin Öğrenme Komitesi Başkan Yardımcısı",
+                      sum: ""
+                    }}
+                />
+                <Card 
+                  admin={
+                    {
+                      name:"Mehmet Murat Köse", 
+                      image:"mehmetmuratkose", 
+                      linkedin: "https://www.linkedin.com/in/mehmet-murat-kose/", 
+                      job: "Derin Öğrenme Komitesi Proje Sorumlusu",
+                      sum: ""
+                    }}
+                />
+                <Card 
+                  admin={
+                    {
+                      name:"Samet Sarper Dinç", 
+                      image:"sametsarperdinc", 
+                      linkedin: "https://www.linkedin.com/in/samet-sarper-din%C3%A7-7a8677228/", 
+                      job: "Derin Öğrenme Komitesi Proje Sorumlusu",
+                      sum: ""
+                    }}
+                />
+                <div className={styles.aligner}></div>
+                <div className={styles.aligner}></div>
+              </div>
             </div>
           </div>
         </div>

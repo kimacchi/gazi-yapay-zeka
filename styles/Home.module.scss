@@ -373,7 +373,7 @@
     align-items: center;
     margin-top: 5vw;
     .cards{
-      width: 73vw;
+      width: 76.5vw;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
@@ -385,7 +385,7 @@
     align-items: center;
     margin-top: 5vw;
     .cards{
-      width: 73vw;
+      width: 76.5vw;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
@@ -397,17 +397,45 @@
     align-items: center;
     margin-top: 5vw;
     .cards{
-      width: 73vw;
+      width: 80vw;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       flex-wrap: wrap;
       div{
-        margin-bottom: 1vw;
+        margin-bottom: 0.5vw;
+      }
+      .first_cards{
+        width: 40vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        justify-content: center;
+        flex-wrap: wrap;
+        div{
+          margin-right: 0.5vw;
+        }
+      }
+      .second_cards{
+        width: 40vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        justify-content: center;
+        flex-wrap: wrap;
+        div{
+          margin-right: 0.5vw;
+        }
       }
     }
   }
 }
+
+.aligner{
+  width: 270px;
+  height: 380px;
+}
+
 
 @media only screen and (max-width: 850px){
   .main{
@@ -815,9 +843,35 @@
         div{
           margin-bottom: 2vh;
         }
+        .first_cards{
+          width: 73vw;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          justify-content: center;
+          flex-wrap: wrap;
+          // div{
+          //   margin-right: 0.5vw;
+          // }
+        }
+        .second_cards{
+          width: 73vw;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          justify-content: center;
+          flex-wrap: wrap;
+          // div{
+          //   margin-right: 0.5vw;
+          // }
+        }
+        
       }
     }
   }
-  
+  .aligner{
+    width: 0px;
+    height: 0px;
+  }
 }
 
