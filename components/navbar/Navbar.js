@@ -1,5 +1,9 @@
 import styles from "./styles.module.scss";
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { bindActionCreators } from "redux";
+import { actionCreators } from "../../store/actions";
+import Router, { useRouter } from 'next/router';
 import { AnimatePresence, motion, useCycle } from "framer-motion";
 import Hamburger from "hamburger-react";
 import Insta from "../../public/instagram.svg"
@@ -7,11 +11,20 @@ import Twitter from "../../public/twitter.svg"
 import Linkedin from "../../public/linkedin.svg"
 import Link from "next/link"
 
-const links = [
-  { name: "Anasayfa", to: "#", id: 1 },
-  { name: "Haberler", to: "#", id: 2 },
-  { name: "Yönetim Sistemi", to: "#", id: 3 },
-];
+// const links = [
+//   { name: "Anasayfa", to: "/", id: 1 },
+//   { name: "Haberler", to: "/haberler", id: 2 },
+//   { name: "Yönetim Sistemi", to: "/login", id: 3 },
+// ];
+
+// const adminLinks = [
+//   { name: "Anasayfa", to: "/", id: 1 },
+//   { name: "Haberler", to: "/haberler", id: 2 },
+//   { name: "Yönetim Sistemi", to: "/login", id: 3 },
+//   { name: "Admin", to: "/admin", id: 4 },
+//   { name: "Yeni Haber", to: "/new-post", id: 5 },
+
+// ]
 
 const itemVariants = {
   closed: {
@@ -37,7 +50,30 @@ const sideVariants = {
 
 
 export default function App() {
+  const currentUser = useSelector((state)=>state.currentUser);
+  const dispatch = useDispatch();
+  const { setCurrentUser } = bindActionCreators(actionCreators, dispatch);
+
   const [open, cycleOpen] = useCycle(false, true);
+
+  const router = useRouter();
+
+
+
+  const links = [
+    { name: "Anasayfa", to: "/", id: 1 },
+    { name: "Haberler", to: "/haberler", id: 2 },
+    { name: "Yönetim Sistemi", to: `${currentUser.userId ? "/events" : "/login"}`, id: 3 },
+  ];
+  
+  const adminLinks = [
+    { name: "Anasayfa", to: "/", id: 1 },
+    { name: "Haberler", to: "/haberler", id: 2 },
+    { name: "Yönetim Sistemi", to: "/login", id: 3 },
+    { name: "Admin", to: "/admin", id: 4 },
+    { name: "Yeni Haber", to: "/new-post", id: 5 },
+  
+  ]
 
   return (
     <main className={styles.main}>
@@ -62,16 +98,45 @@ export default function App() {
               variants={sideVariants}
             >
                 <div className={styles.normal_links}>
-                    {links.map(({ name, to, id }) => (
-                        <motion.a
-                            key={id}
-                            href={to}
-                            whileHover={{ scale: 1.1 }}
-                            variants={itemVariants}
-                        >
-                        {name}
-                        </motion.a>
-                    ))}
+                    
+                    {
+                      currentUser.userType === "admin" ?
+                      <div> 
+                        {adminLinks.map(({ name, to, id }) => (
+                          <motion.p
+                              key={id}
+                              onClick={() => router.push(to)}
+                              whileHover={{ scale: 1.1 }}
+                              variants={itemVariants}
+                          >
+                          {name}
+                          </motion.p>
+                        ))}
+                      </div>
+                      :
+                      <div>
+                        {links.map(({ name, to, id }) => (
+                          <motion.p
+                              key={id}
+                              onClick={() => router.push(to)}
+                              whileHover={{ scale: 1.1 }}
+                              variants={itemVariants}
+                          >
+                          {name}
+                          </motion.p>
+                        ))}
+                      </div>
+                    }
+                </div>
+                <div
+                  className={styles.logout}
+                >
+                  <p onClick={() => {
+                      setCurrentUser({});
+                      router.push("/");
+                    }}>
+                    logout
+                  </p>
                 </div>
                 <div
                     className={styles.social_links}

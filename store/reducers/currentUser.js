@@ -8,7 +8,7 @@ export default (state = {}, action)=>{
                 name: action.Name,
                 schoolNo: action.SchoolNo,                
                 email: action.Email,
-                phoneNum: action.PhoneNum,
+                phoneNo: action.PhoneNo,
                 token: action.token,
             };
         case "DEL_USER":

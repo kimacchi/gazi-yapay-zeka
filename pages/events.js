@@ -1,8 +1,12 @@
 import React,{useState,useEffect} from 'react'
 import styles from "../styles/Events.module.scss";
+import { useSelector } from 'react-redux';
 import Particle from "../components/background/Particle";
 import Navbar from "../components/navbar/Navbar"
 import { Button } from '@mui/material';
+import { useRouter } from 'next/router';
+import axios from 'axios';
+
 
 const tempData=[
     {
@@ -81,6 +85,23 @@ const tempData=[
 ]
 
 const EventList = ()=>{
+    const currentUser = useSelector((state)=>state.currentUser);
+    const router = useRouter();
+
+    const [events, setEvents] = useState([]);
+
+    useEffect(()=>{
+       if(!currentUser.userId){
+        router.push("/login");
+       }
+       axios.get(process.env.NEXT_PUBLIC_GET_EVENTs , {
+        "headers": {'Content-Type': 'application/json', "Authorization": currentUser.token}
+       }).then(e => {
+        setEvents(e.data.reverse());
+       })
+    }, [])
+
+
     const [state, setState] = useState({});
     const handleState = (e)=>{
         setState(e);
@@ -93,22 +114,43 @@ const EventList = ()=>{
                 {
                     tempData.length > 0 ? 
                     <div className={styles.event_list_list}>
-                        {tempData.map((ele)=>{
+                        {events.map((ele)=>{
                             return(
-                                <div className={styles.single_event} key={ele.id}>
+                                <div className={styles.single_event} key={ele._id}>
                                     <p 
                                         onClick={()=>{
-                                            if(ele.id === state.id){
+                                            if(ele._id === state._id){
                                                 handleState({})
                                             }else{
                                                 handleState(ele);
                                             }
                                         }} 
-                                        style={state.id === ele.id ? {fontWeight: 600}: {fontWeight: 300}}
+                                        style={state._id === ele._id ? {fontWeight: 600}: {fontWeight: 300}}
                                     >
                                         {ele.Name}
                                     </p>
-                                    <Button variant='outlined'>KATIL</Button>
+                                    <Button 
+                                        variant='outlined' 
+                                        disabled={
+                                            new Date() > new Date(ele.Deadline)
+                                            ||
+                                            ele.Participants.filter((e) => {
+                                                if(e.Name === currentUser.name){
+                                                    return true
+                                                }
+                                                return false;
+                                            }).length > 0 
+                                        } 
+                                        onClick={() => {
+                                            axios.post(process.env.NEXT_PUBLIC_ADD_TO_EVENT + currentUser.userId + "/" + ele._id, {}, {
+                                                "headers": {'Content-Type': 'application/json', "Authorization": currentUser.token}
+                                            }).then(() => {
+                                                
+                                            })
+                                        }}
+                                    >
+                                        KATIL
+                                    </Button>
                                 </div>
                             )
                         })}                        

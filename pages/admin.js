@@ -1,5 +1,7 @@
 import React, {useState,useEffect} from 'react'
 import styles from "../styles/Admin.module.scss";
+import { useSelector } from 'react-redux';
+import { useRouter } from 'next/router';
 import Navbar from "../components/navbar/Navbar";
 import Particle from "../components/background/Particle";
 import TextField from '@mui/material/TextField';
@@ -11,6 +13,7 @@ import { MobileDatePicker } from '@mui/x-date-pickers';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { v4 as uuid } from 'uuid';
+import axios from 'axios';
 
 const theme = createTheme({
     palette: {
@@ -284,6 +287,28 @@ const Nav = ()=>{
 
 
 const AdminComp = ()=>{
+    const currentUser = useSelector((state)=>state.currentUser);
+    const router = useRouter();
+
+    const [events, setEvents] = useState([]);
+    const [users, setUsers] = useState([]);
+
+    useEffect(()=>{
+       if(currentUser.userType !== "admin"){
+        router.push("/login");
+       }
+       axios.get(process.env.NEXT_PUBLIC_GET_EVENTs , {
+        "headers": {'Content-Type': 'application/json', "Authorization": currentUser.token}
+       }).then(e => {
+        setEvents(e.data.reverse());
+       })
+       axios.get(process.env.NEXT_PUBLIC_GET_USERS , {
+        "headers": {'Content-Type': 'application/json', "Authorization": currentUser.token}
+       }).then(e => {
+        setUsers(e.data);
+       })
+    }, [])
+
     const [width, setWidth] = useState(851)
     useEffect(()=>{
         if(typeof window !== "undefined"){
@@ -304,6 +329,8 @@ const AdminComp = ()=>{
         }
     })
 
+    
+
     const [selectedEvent, setSelectedEvent] = useState({});
     
     const [selectedUser, setSelectedUser] = useState({});
@@ -316,6 +343,25 @@ const AdminComp = ()=>{
     const [eventDate, setEventDate] = useState("");
     const [eventDescription, setEventDescription] = useState("");
     const [eventDeadline, setEventDeadline] = useState(new Date());
+
+    const createNewEvent = () => {
+        axios.post(process.env.NEXT_PUBLIC_ADD_EVENT, {
+            "Name": eventName,
+            "Date": eventDate,
+            "Deadline": eventDeadline,
+            "Participants": [],
+            "Description": eventDescription,
+            Place: eventPlace
+        }, {
+            headers: {'Content-Type': 'application/json', "Authorization": currentUser.token}
+        }).then(() => {
+            axios.get(process.env.NEXT_PUBLIC_GET_EVENTs , {
+                "headers": {'Content-Type': 'application/json', "Authorization": currentUser.token}
+            }).then(e => {
+            setEvents(e.data.reverse());
+            })
+        })
+    }
 
     return (
         <div className={styles.wrapper}>
@@ -425,7 +471,7 @@ const AdminComp = ()=>{
                             className={styles.text_field}
                         />
                     </ThemeProvider>
-                    <Button variant="outlined">OLUŞTUR</Button>
+                    <Button variant="outlined" onClick={createNewEvent}>OLUŞTUR</Button>
                 </div>
             </div>
 

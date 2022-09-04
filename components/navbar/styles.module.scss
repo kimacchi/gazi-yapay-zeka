@@ -7,6 +7,7 @@
   .main {
     display: flex;
     margin: 0;
+    // overflow-y: auto;
   }
 
   .aside {
@@ -23,6 +24,8 @@
     margin: 0;
     padding: 0;
     border-radius: 0vw 0vw 2vw 0;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
   
   .container {
@@ -31,13 +34,15 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
   
   .btn_container button {
     position: fixed;
   }
   
-  .container a {
+  .container p {
     font-family: "Inter", "Barlow", "Antonio", "Sans Serif";
     letter-spacing: 1px;
     font-size: 24px;
@@ -46,8 +51,13 @@
     margin: 0;
     color: white;
     margin-top: 2vw;
-    margin-bottom: 3vw;
+    margin-bottom: 2vw;
+    cursor:pointer;
     // margin-left: 1vw;
+  }
+
+  .logout{
+    margin-top: 8vw;
   }
 
   .social_links{
@@ -55,17 +65,37 @@
     width: 20vw;
     margin: 0;
     justify-content: space-around;
-    margin-top: 27vh;
+    margin-top: 8vh;
+    a{
+      cursor: pointer;
+    }
   }
 
   .normal_links{
     display: flex;
     flex-direction: column;
     margin-top: 1vh;
+    div{
+      display: flex;
+      flex-direction: column;
+      margin-top: 1vh;
+      p{
+        font-family: "Inter", "Barlow", "Antonio", "Sans Serif";
+        letter-spacing: 1px;
+        font-size: 24px;
+        font-weight: 400;
+        padding: 0;
+        margin: 0;
+        color: white;
+        margin-top: 2vw;
+        margin-bottom: 1vw;
+        cursor:pointer;
+      }
+    }
   }
 
   @media only screen and (max-width: 850px){
-    .container a {
+    .container p {
         font-size: 28px;
         margin-top: 4vh;
         margin-bottom: 6vh;
@@ -91,13 +121,27 @@
         width: 60vw;
         margin: 0;
         justify-content: space-around;
-        margin-top: 28vh;
+        margin-top: 14vh;
+        
+      }
+      .logout{
+        margin-top: 4vh;
       }
     
       .normal_links{
         display: flex;
         flex-direction: column;
         margin-top: 5vh;
+        div{
+          display: flex;
+          flex-direction: column;
+          // margin-top: 5vh;
+          p{
+            font-size: 28px;
+            margin-top: 4vh;
+            margin-bottom: 6vh;
+          }
+        }
       }
   }
   

@@ -1,5 +1,7 @@
 import React, {useState,useEffect} from 'react'
 import styles from "../styles/NewPost.module.scss";
+import { useSelector } from 'react-redux';
+import { useRouter } from 'next/router';
 import Navbar from "../components/navbar/Navbar";
 import MyEditor from '../components/Editor';
 import Particle from "../components/background/Particle";
@@ -102,7 +104,15 @@ const Nav = ()=>{
 
 
 const NewPost = () => {
-   
+    const currentUser = useSelector((state)=>state.currentUser);
+    const router = useRouter();
+    useEffect(()=>{
+       if(!currentUser.userId){
+        router.push("/login");
+       }
+    }, [])
+
+
   return (
     <div className={styles.container}>
         <Particle />
