@@ -5,6 +5,8 @@ import {
   InputAdornment,
   InputLabel,
   FormControl,
+  ThemeProvider,
+  createTheme
 } from "@mui/material";
 import { useRouter } from "next/router";
 import { useDispatch, useSelector } from "react-redux";
@@ -21,6 +23,13 @@ import CustomInput from "../components/custom-mui/CustomInput";
 import dynamic from "next/dynamic";
 import NoSsr from "../components/NoSsr";
 import Navbar from "../components/navbar/Navbar";
+
+
+const darkTheme= createTheme({
+  palette: {
+      mode: "dark",
+  },
+});
 
 const axios = require("axios");
 
@@ -62,20 +71,22 @@ const LoginComponent = ({ onTypeChange = () => {} }) => {
       <div className={styles.login__wrapper}>
         <p className={styles.gradient}>Yapay Zeka Topluluğu</p>
         <div className={styles.login__wrapper_input_container}>
-          <CustomInput
-            onValueChange={(e) => {
-              setEmail(e);
-            }}
-            type="text"
-            label="Email"
-          />
-          <CustomInput
-            onValueChange={(e) => {
-              setPassword(e);
-            }}
-            type="password"
-            label="Şifre"
-          />
+          <ThemeProvider theme={theme}>
+            <CustomInput
+              onValueChange={(e) => {
+                setEmail(e);
+              }}
+              type="text"
+              label="Email"
+            />
+            <CustomInput
+              onValueChange={(e) => {
+                setPassword(e);
+              }}
+              type="password"
+              label="Şifre"
+            />
+          </ThemeProvider>
         </div>
         <div className={styles.utility_container}>
           <p onClick={typeHandler}>
