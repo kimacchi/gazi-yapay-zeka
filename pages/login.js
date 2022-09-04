@@ -71,7 +71,7 @@ const LoginComponent = ({ onTypeChange = () => {} }) => {
       <div className={styles.login__wrapper}>
         <p className={styles.gradient}>Yapay Zeka Topluluğu</p>
         <div className={styles.login__wrapper_input_container}>
-          <ThemeProvider theme={theme}>
+          <ThemeProvider theme={darkTheme}>
             <CustomInput
               onValueChange={(e) => {
                 setEmail(e);
