@@ -13,6 +13,9 @@ import Twitter from "../public/twitter.svg";
 import Particle from '../components/background/Particle';
 import Navbar from "../components/navbar/Navbar"
 import Card from '../components/Card';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 const theme = createTheme({
   palette: {
@@ -22,6 +25,17 @@ const theme = createTheme({
 
 
 export default function Home() {
+
+
+
+  const [threeNews, setThreeNews] = useState([]);
+  useEffect(() => {
+    axios.get(process.env.NEXT_PUBLIC_FIND_THREE_NEWS).then((e) => {
+      setThreeNews(e.data);
+      console.log(e.data)
+    })
+  },[])
+
   const router = useRouter();
   return (
     <div className={styles.container}>
@@ -58,71 +72,116 @@ export default function Home() {
           <div className={styles.second_section__wrapper_post__1}>
             <div className={styles.second_section__wrapper_post_information}>
               <p className={styles.second_section__wrapper_post_information_category}>
-                HABER KONUSU
+                {threeNews[2] !== undefined ? threeNews[2].Category[0] : ""}
               </p>
               <p className={styles.second_section__wrapper_post_information_header}>
-                Haber Başlığı
+                {threeNews[2] !== undefined ? threeNews[2].Title : ""}
               </p>
               <p className={styles.second_section__wrapper_post_information_sum}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et id aenean sit vestibulum magna. Eget aliquet odio magna lacus id augue mauris vitae eu.
+                {threeNews[2] !== undefined ? threeNews[2].Summary : ""}
               </p>
               <button
                 className={styles.second_section__wrapper_post_button}
+                onClick={() => {
+                  if(threeNews[2] !== undefined){
+                    router.push("/haberler/" + threeNews[2]._id);
+                  }
+                }}
               >
                 <p>DEVAMI</p>
                 <Right />
               </button>
             </div>
             <div className={styles.second_section__wrapper_post_image}>
-              
+              {
+                threeNews[2] !== undefined ?
+                  <Image  
+                    src={threeNews[2].imgURL}
+                    alt="news image"
+                    layout='fill'
+                  />
+                  :
+                  undefined
+              }
             </div>
           </div>
           <div className={styles.second_section__wrapper_post__2}>
             <div className={styles.second_section__wrapper_post_information}>
               <p className={styles.second_section__wrapper_post_information_category}>
-                HABER KONUSU
+                {threeNews[1] !== undefined ? threeNews[1].Category[0] : ""}
               </p>
               <p className={styles.second_section__wrapper_post_information_header}>
-                Haber Başlığı
+                {threeNews[1] !== undefined ? threeNews[1].Title : ""}
               </p>
               <p className={styles.second_section__wrapper_post_information_sum}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et id aenean sit vestibulum magna. Eget aliquet odio magna lacus id augue mauris vitae eu.
+                {threeNews[1] !== undefined ? threeNews[1].Summary : ""}
               </p>
               <button
                 className={styles.second_section__wrapper_post_button}
+                onClick={() => {
+                  if(threeNews[1] !== undefined){
+                    router.push("/haberler/" + threeNews[1]._id);
+                  }
+                }}
               >
                 <p>DEVAMI</p>
                 <Right />
               </button>
             </div>
             <div className={styles.second_section__wrapper_post_image}>
-              
+              {
+                threeNews[1] !== undefined ?
+                  <Image  
+                    src={threeNews[1].imgURL}
+                    alt="news image"
+                    layout='fill'
+                  />
+                  :
+                  undefined
+              }
             </div>
           </div>
           <div className={styles.second_section__wrapper_post__1}>
             <div className={styles.second_section__wrapper_post_information}>
               <p className={styles.second_section__wrapper_post_information_category}>
-                HABER KONUSU
+                {threeNews[0] !== undefined ? threeNews[0].Category[0] : ""}
               </p>
               <p className={styles.second_section__wrapper_post_information_header}>
-                Haber Başlığı
+                {threeNews[0] !== undefined ? threeNews[0].Title : ""}
               </p>
               <p className={styles.second_section__wrapper_post_information_sum}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et id aenean sit vestibulum magna. Eget aliquet odio magna lacus id augue mauris vitae eu.
+                {threeNews[0] !== undefined ? threeNews[0].Summary : ""}
               </p>
               <button
                 className={styles.second_section__wrapper_post_button}
+                onClick={() => {
+                  if(threeNews[0] !== undefined){
+                    router.push("/haberler/" + threeNews[0]._id);
+                  }
+                }}
               >
                 <p>DEVAMI</p>
                 <Right />
               </button>
             </div>
             <div className={styles.second_section__wrapper_post_image}>
-              
+              {
+                threeNews[0] !== undefined ?
+                  <Image  
+                    src={threeNews[0].imgURL}
+                    alt="news image"
+                    layout='fill'
+                  />
+                  :
+                  undefined
+              }
             </div>
           </div>
           <button
             className={styles.second_section__wrapper_button}
+            onClick={() => {
+                router.push("/haberler");
+            }}
           >
             <p>TÜM HABERLER</p>
             <RightWhite />
@@ -317,7 +376,6 @@ export default function Home() {
                       sum: ""
                     }}
                 />
-                <div className={styles.aligner}></div>
                 <div className={styles.aligner}></div>
               </div>
             </div>

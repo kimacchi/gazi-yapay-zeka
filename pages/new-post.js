@@ -8,6 +8,8 @@ import Particle from "../components/background/Particle";
 import TextField from '@mui/material/TextField';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { Button } from '@mui/material';
+import axios from 'axios';
+
 
 const theme = createTheme({
     palette: {
@@ -16,11 +18,31 @@ const theme = createTheme({
   })
 
 const PostEditor = ()=>{
+
+    const currentUser = useSelector((state)=>state.currentUser);
+    const router = useRouter();
+
+
     const [header, setHeader] = useState("");
     const [category, setCategory] = useState("");
     const [sum, setSum] = useState("");
     const [content, setContent] = useState("");
     const [imgLink, setImgLink] = useState("");
+
+    const addNewNews = () => {
+        axios.post(process.env.NEXT_PUBLIC_ADD_NEWS, {
+            "Title": header,
+            "Category": [category],
+            "Summary": sum,
+            "Description": `${content}`,
+            "imgURL": imgLink
+        },{
+            "headers": {'Content-Type': 'application/json', "Authorization": currentUser.token}
+        }).then(() => {
+            router.push("/");
+        })
+    }
+    console.log(currentUser.token);
     return(
         <div className={styles.new_post_wrapper}>
             <h1>Yeni Haber Oluştur</h1>
@@ -68,7 +90,7 @@ const PostEditor = ()=>{
                 />
             </ThemeProvider>
             <MyEditor setState={(e)=>{setContent(e)}} />
-            <Button variant="outlined" className={styles.button} >HABERİ EKLE</Button>
+            <Button variant="outlined" className={styles.button} onClick={addNewNews}>HABERİ EKLE</Button>
         </div>
     )
 }

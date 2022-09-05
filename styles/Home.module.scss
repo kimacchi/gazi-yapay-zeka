@@ -139,6 +139,7 @@
         }
       }
       .second_section__wrapper_post_image{
+        position: relative;
         width: 33vw;
         background-color: rgb(7, 13, 33);
       }
@@ -213,6 +214,7 @@
         }
       }
       .second_section__wrapper_post_image{
+        position: relative;
         width: 33vw;
         background-color: rgb(7, 13, 33);
       }
@@ -295,6 +297,11 @@
     .third_section__wrapper_button:hover{
       transform: scale(1.05);
       background-color: rgba(0, 0, 0, 0.152);
+    }
+    .third_section__wrapper_post_image{
+      position: relative;
+      width: 33vw;
+      background-color: rgb(7, 13, 33);
     }
   }
   .short_border{

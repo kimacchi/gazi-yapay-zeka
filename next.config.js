@@ -6,6 +6,9 @@ const nextConfig = {
       use: ["@svgr/webpack"]
     });
     return config;
+  },
+  images:{
+    domains: ["i.imgur.com"]
   }
 }
 

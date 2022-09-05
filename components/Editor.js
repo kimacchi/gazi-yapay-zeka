@@ -1,6 +1,7 @@
 import React, {useState, useRef, useMemo} from 'react';
 // import JoditEditor from "jodit-react";
 import dynamic from 'next/dynamic';
+import styles from "./styles.module.scss"
 
 const importJodit = () => import('jodit-react');
 
@@ -15,13 +16,14 @@ export default function MyEditor({setState}) {
 
 	const config = useMemo(()=>{return {
 		readonly: false,
-		placeholder: "" || 'Bir şeyler yazın...'
+		placeholder: "" || 'Bir şeyler yazın...',
+        maxHeight: 400
 	}}, [])
 
     const handleChange = (e)=>{
         setContent(e);
         setState(e);
-        console.log(e);
+        // console.log(e);
     }
 
 	return (
@@ -32,6 +34,7 @@ export default function MyEditor({setState}) {
                 config={config}
                 tabIndex={1} // tabIndex of textarea
                 onBlur={handleChange} // preferred to use only this option to update the content for performance reasons
+                className={styles.jodit}
             />
             {/* <div dangerouslySetInnerHTML={{__html: content}}>
 

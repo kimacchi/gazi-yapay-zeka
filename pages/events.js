@@ -145,7 +145,11 @@ const EventList = ()=>{
                                             axios.post(process.env.NEXT_PUBLIC_ADD_TO_EVENT + currentUser.userId + "/" + ele._id, {}, {
                                                 "headers": {'Content-Type': 'application/json', "Authorization": currentUser.token}
                                             }).then(() => {
-                                                
+                                                axios.get(process.env.NEXT_PUBLIC_GET_EVENTs , {
+                                                    "headers": {'Content-Type': 'application/json', "Authorization": currentUser.token}
+                                                }).then(e => {
+                                                    setEvents(e.data.reverse());
+                                                })
                                             })
                                         }}
                                     >
