@@ -19,7 +19,7 @@ const AllNews = () => {
 
     useEffect(() => {
         axios.get(process.env.NEXT_PUBLIC_GET_NEWS).then((e) => {
-            setAllNews(e.data);
+            setAllNews(e.data.reverse());
         })
     }, [])
 
