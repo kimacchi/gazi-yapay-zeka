@@ -19,9 +19,6 @@
         margin-left: 1vw;
     }
     .info{
-        // display: flex;
-        // flex-direction: column;
-        // justify-content: space-around;
         margin-left: 2vw;
         h1{
             font-family: "Work Sans";
@@ -45,4 +42,52 @@
 .container:hover{
     background-color: rgba(58, 58, 58, 0.2);
     cursor: pointer;
+}
+
+@media only screen and (max-width: 850px){
+    .container{
+        display: flex;
+        align-items: center;
+        // justify-content: space-between;
+        width: 90vw;
+        height: 15vh;
+        margin-bottom: 8vh;
+        background-color: rgba(58, 58, 58, 0.0);
+        .image{
+            z-index: -1;
+            position: relative;
+            width: 15vh;
+            height: 15vh;
+            margin-left: 1vw;
+        }
+        .info{
+            width: 55vw;
+            margin-left: 2vh;
+            h1{
+                font-family: "Work Sans";
+                font-weight: 400;
+                font-size: 20px;
+                padding:0;
+                margin: 0;
+                padding-top: 10px;
+
+            }
+            p{
+                font-family: "Barlow";
+                font-weight: 500;
+                font-size: 12px;
+                color: rgb(171, 171, 171);
+                padding:0;
+                margin: 0;
+            }
+            h2{
+                font-family: "Inter";
+                font-weight: 300;
+                font-size: 14px;
+                padding:0;
+                margin: 0;
+                padding-top: 10px;
+            }
+        }
+    }
 }
