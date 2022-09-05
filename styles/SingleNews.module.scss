@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+.container{
+    .wrapper{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        overflow-x: hidden;
+        .content_wrapper{
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 5vw;
+            .image{
+                position: relative;
+                width: 300px;
+                height: 300px;
+                margin-bottom: 3vw;
+            }
+            .category{
+                font-family: "Barlow";
+                font-weight: 400;
+                font-size: 14px;
+                letter-spacing: 3px;
+                color: white;
+                margin: 0;
+                padding: 0;
+                margin-bottom: 1vw;
+            }
+            .title{
+                font-family: "Antonio";
+                font-weight: 500;
+                font-size: 48px;
+                letter-spacing: 2px;
+                color: white;
+                margin: 0;
+                padding: 0;
+                margin-bottom: 2vw;
+            }
+            .content{
+                font-family: "Inter", "Barlow", "Antonio", "Sans Serif";
+                font-weight: 300;
+                font-size: 16px;
+                letter-spacing: 1px;
+                color: white;
+                width: 90%;
+                margin-bottom: 5vw;
+            }
+        }
+    }
+    .footer_section__wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        .footer_section__wrapper_links{
+          width: 27vw;
+          padding-top: 5vw;
+          padding-left: 2vw;
+          padding-right: 2vw;
+          display: flex;
+          justify-content: space-around;
+          margin-bottom: 2vw;
+          border-top: 1px solid white;
+        }
+        .footer_section__wrapper_creators{
+          font-family: "Work Sans";
+          font-size: 16px;
+          letter-spacing: 3px;
+          color: white;
+          font-weight: 200;
+          a{
+            font-family: "Barlow";
+            font-weight: 400;
+            font-size: 16px;
+            padding: 0;
+            margin: 0;
+            color: #cbcbcb;
+            display: inline-block;
+            position: relative;
+            margin-bottom: 0.5vw;
+            text-decoration: none;
+          }
+          a:after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 0.1vw;
+            bottom: 0;
+            left: 0;
+            background-color: #FFF;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+          }
+          a:hover:after{
+            transform: scaleX(1);
+            transform-origin: bottom left;
+          }
+        }
+        .footer_section__wrapper_rights{
+          font-family: "Work Sans";
+          font-size: 16px;
+          // letter-spacing: 3px;
+          color: white;
+          font-weight: 400;
+          padding-bottom: 2vw;
+        }
+      }
+}
+
+@media only screen and (max-width: 850px){
+    .container{
+        .wrapper{
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            overflow-x: hidden;
+            .content_wrapper{
+                width: 90%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 8vh;
+                .image{
+                    position: relative;
+                    width: 300px;
+                    height: 300px;
+                    margin-bottom: 3vw;
+                }
+                .category{
+                    font-family: "Barlow";
+                    font-weight: 400;
+                    font-size: 20px;
+                    letter-spacing: 3px;
+                    color: white;
+                    margin: 0;
+                    padding: 0;
+                    margin-top: 5vh;
+                    margin-bottom: 2vh;
+                }
+                .title{
+                    font-family: "Antonio";
+                    font-weight: 500;
+                    font-size: 48px;
+                    letter-spacing: 2px;
+                    color: white;
+                    margin: 0;
+                    padding: 0;
+                    margin-bottom: 4vh;
+                    text-align: center;
+                }
+                .content{
+                    font-family: "Inter", "Barlow", "Antonio", "Sans Serif";
+                    font-weight: 300;
+                    font-size: 18px;
+                    letter-spacing: 1px;
+                    // line-height: 27px;
+                    color: white;
+                    width: 90vw;
+                    margin: 0;
+                    padding: 0;
+                    margin-bottom: 7vh;
+                }
+            }
+        }
+        .footer_section__wrapper{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            .footer_section__wrapper_links{
+                padding-top: 7vh;
+                padding-left: 4vh;
+                padding-right: 4vh;
+                width: 70vw;
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 7vh;
+            }
+            .footer_section__wrapper_creators{
+                font-family: "Work Sans";
+                font-size: 20px;
+                letter-spacing: 3px;
+                color: white;
+                font-weight: 200;
+                a{
+                font-family: "Barlow";
+                font-weight: 400;
+                font-size: 20px;
+                padding: 0;
+                margin: 0;
+                color: #cbcbcb;
+                display: inline-block;
+                position: relative;
+                margin-bottom: 2vh;
+                text-decoration: none;
+                }
+                a:after{
+                content: '';
+                position: absolute;
+                width: 100%;
+                transform: scaleX(0);
+                height: 0.1vw;
+                bottom: 0;
+                left: 0;
+                background-color: #FFF;
+                transform-origin: bottom right;
+                transition: transform 0.25s ease-out;
+                }
+                a:hover:after{
+                transform: scaleX(1);
+                transform-origin: bottom left;
+                }
+            }
+            .footer_section__wrapper_rights{
+                font-family: "Work Sans";
+                font-size: 16px;
+                // letter-spacing: 3px;
+                color: white;
+                font-weight: 400;
+                padding-bottom: 4vh;
+            }
+        }
+    }
+}
