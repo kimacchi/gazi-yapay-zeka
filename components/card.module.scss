@@ -54,6 +54,9 @@
     transition: all 0.4s ease;
     text-align: right;
     color: #efefef;
+    .more_button{
+      cursor: pointer;
+    }
   }
   
   .admincard:hover {
@@ -75,6 +78,11 @@
     }
     .admincard__info h2 {
       font-size: 1rem;
+    }
+    .more_button{
+      width: 0px;
+      height: 0px;
+      margin-left: 105px;
     }
   }
   

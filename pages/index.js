@@ -201,6 +201,7 @@ export default function Home() {
                     job: "Kurucu Başkan",
                     sum: "Gürkan Hasan Karaman 2017 yılında Gazi Üniversitesi Bilgisayar Mühendisliğini kazandı ve 2022 yılında bölümü bitirdi. Kendisi IEEE topluluğunda yönetim kurulu başkan yardımcılığı ve komite başkanlığı yaptı. Getir şirketinin kısa yol algoritmasını staj süresinde tasarladı. 2022 yılında da Gazi Üniversitesi Yapay Zeka Topluluğunun kuruculardan oldu. Şu anda Amerika'da Amazon şirketinde çalışıyor."
                   }}
+                sum={true}
               />
               <Card 
                 admin={
@@ -211,6 +212,7 @@ export default function Home() {
                     job: "Kurucu Başkan Yardımcısı",
                     sum: "Feyyaz Kavun 2017 yılında Gazi Üniversitesi Bilgisayar Mühendisliğini kazandı ve 2022 yılında bölümü bitirdi. Kendisi IEEE topluluğunda proje koordinatörlüğü görevini üslendi. Gazi MST Roket Takımı ve GAZİ HORİZON TEKNOLOJİ TAKIMI  ile teknofeste katıldı. Aynı zamanda BiSoft Bilgi Teknolojileri şirketinde stajını tamamladı ve SimTek şirketinde aday mühendislik görevinde bulundu. 2022 yılında da Gazi Üniversitesi Yapay Zeka Topluluğunun kuruculardan oldu."
                   }}
+                sum={true}
               />
               <Card 
                 admin={
@@ -221,6 +223,7 @@ export default function Home() {
                     job: "Kurucu Başkan Yardımcısı",
                     sum: "Orhan Kaplan 2017 yılında Gazi Üniversitesi Bilgisayar Mühendisliğini kazandı ve 2022 yılında bölümü bitirdi. Kendisi IEEE topluluğunda proje sorumluluğu ve öğrenci mentorlüğü görevlerini üslendi. Rakort Information Technologies şirketinde stajını tamamladı. 2022 yılında da Gazi Üniversitesi Yapay Zeka Topluluğunun kuruculardan oldu."
                   }}
+                sum={true}
               />
               <Card 
                 admin={
@@ -231,6 +234,7 @@ export default function Home() {
                     job: "Kurucu Genel Sekreter",
                     sum: "Alican Sucu 2017 yılında Gazi Üniversitesi Bilgisayar Mühendisliğini kazandı ve 2022 yılında bilgisayar mühendisliği bölümünü hem bölüm 1.si olarak hem de fakülte 1.si olarak bitirdi. Rakort Information Technologies ve Havelsan gibi sektörün önde gelen şirketlerinde stajını tamamladı. 2022 yılında da Gazi Üniversitesi Yapay Zeka Topluluğunun kuruculardan oldu."
                   }}
+                sum={true}
               />
             </div>
           </div>
