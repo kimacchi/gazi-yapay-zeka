@@ -3,28 +3,15 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { bindActionCreators } from "redux";
 import { actionCreators } from "../../store/actions";
-import Router, { useRouter } from 'next/router';
+import { useRouter } from 'next/router';
 import { AnimatePresence, motion, useCycle } from "framer-motion";
 import Hamburger from "hamburger-react";
 import Insta from "../../public/instagram.svg"
+import Logout from "../../public/logout.svg"
 import Twitter from "../../public/twitter.svg"
 import Linkedin from "../../public/linkedin.svg"
 import Link from "next/link"
 
-// const links = [
-//   { name: "Anasayfa", to: "/", id: 1 },
-//   { name: "Haberler", to: "/haberler", id: 2 },
-//   { name: "Yönetim Sistemi", to: "/login", id: 3 },
-// ];
-
-// const adminLinks = [
-//   { name: "Anasayfa", to: "/", id: 1 },
-//   { name: "Haberler", to: "/haberler", id: 2 },
-//   { name: "Yönetim Sistemi", to: "/login", id: 3 },
-//   { name: "Admin", to: "/admin", id: 4 },
-//   { name: "Yeni Haber", to: "/new-post", id: 5 },
-
-// ]
 
 const itemVariants = {
   closed: {
@@ -128,47 +115,49 @@ export default function App() {
                       </div>
                     }
                 </div>
-                <div
-                  className={styles.logout}
-                >
-                  <p onClick={() => {
+                <div className={styles.wrapper_2}>
+                  <motion.div
+                    whileHover={{scale:1.1}}
+                    className={styles.logout}
+                    onClick={() => {
                       setCurrentUser({});
                       router.push("/");
-                    }}>
-                    logout
-                  </p>
-                </div>
-                <div
-                    className={styles.social_links}
-                >
-                    <Link href="https://www.instagram.com/gaziyapayzeka/">
-                        <motion.a 
-                            target={"_blank"}
-                            whileHover={{ scale: 1.1 }}
-                            variants={itemVariants}
-                        >
-                                
-                            <Insta />
-                        </motion.a>
-                    </Link>
-                    <Link href="https://www.linkedin.com/company/gazi-%C3%BCniversitesi-yapay-zeka-toplulu%C4%9Fu/?originalSubdomain=tr">
-                        <motion.a 
-                            target={"_blank"}
-                            whileHover={{ scale: 1.1 }}
-                            variants={itemVariants}
-                        >
-                            <Linkedin />
-                        </motion.a>
-                    </Link>
-                    <Link href="">
-                        <motion.a 
-                            target={"_blank"}
-                            whileHover={{ scale: 1.1 }}
-                            variants={itemVariants}
-                        >
-                            <Twitter />
-                        </motion.a>
-                    </Link>
+                    }}
+                  >
+                    <Logout />
+                  </motion.div>
+                  <div
+                      className={styles.social_links}
+                  >
+                      <Link href="https://www.instagram.com/gaziyapayzeka/">
+                          <motion.a 
+                              target={"_blank"}
+                              whileHover={{ scale: 1.1 }}
+                              variants={itemVariants}
+                          >
+                                  
+                              <Insta />
+                          </motion.a>
+                      </Link>
+                      <Link href="https://www.linkedin.com/company/gazi-%C3%BCniversitesi-yapay-zeka-toplulu%C4%9Fu/?originalSubdomain=tr">
+                          <motion.a 
+                              target={"_blank"}
+                              whileHover={{ scale: 1.1 }}
+                              variants={itemVariants}
+                          >
+                              <Linkedin />
+                          </motion.a>
+                      </Link>
+                      <Link href="">
+                          <motion.a 
+                              target={"_blank"}
+                              whileHover={{ scale: 1.1 }}
+                              variants={itemVariants}
+                          >
+                              <Twitter />
+                          </motion.a>
+                      </Link>
+                  </div>
                 </div>
             </motion.div>
           </motion.aside>

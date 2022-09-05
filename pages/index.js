@@ -58,7 +58,7 @@ export default function Home() {
             Yapay Zeka Topluluğu
           </p>
           <p className={styles.first_section__wrapper_subtext}>
-            Sit amet purus gravida quis turpis hac tincidunt praesent semper
+            {'"Daha zeki bir gelecek uğruna Gazi AI !"'}
           </p>
           <button
             className={styles.first_section__wrapper_button}

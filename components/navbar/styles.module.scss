@@ -31,8 +31,9 @@
   .container {
     // margin: 4.5rem 1.4rem;
     display: flex;
+    height: 85vh;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     overflow-y: hidden;
     overflow-x: hidden;
@@ -58,6 +59,7 @@
 
   .logout{
     margin-top: 8vw;
+    cursor: pointer;
   }
 
   .social_links{
@@ -65,7 +67,7 @@
     width: 20vw;
     margin: 0;
     justify-content: space-around;
-    margin-top: 8vh;
+    margin-top: 6vh;
     a{
       cursor: pointer;
     }
@@ -94,12 +96,19 @@
     }
   }
 
+  .wrapper_2{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2vw;
+  }
+
   @media only screen and (max-width: 850px){
-    .container p {
-        font-size: 28px;
-        margin-top: 4vh;
-        margin-bottom: 6vh;
-    }
+    // .container p {
+    //     font-size: 28px;
+    //     margin-top: 4vh;
+    //     margin-bottom: 6vh;
+    // }
     .aside {
         background: hsla(216, 69%, 15%, 1);
 
@@ -121,7 +130,7 @@
         width: 60vw;
         margin: 0;
         justify-content: space-around;
-        margin-top: 14vh;
+        margin-top: 8vh;
         
       }
       .logout{
@@ -138,8 +147,8 @@
           // margin-top: 5vh;
           p{
             font-size: 28px;
-            margin-top: 4vh;
-            margin-bottom: 6vh;
+            margin-top: 1vh;
+            margin-bottom: 3vh;
           }
         }
       }

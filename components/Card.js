@@ -7,7 +7,6 @@ import More from "../public/more.svg";
 const Card = ({admin, sum=false}) => {
 
     const [moreInfo, setMoreInfo] = useState(false);
-    useEffect(() => console.log(moreInfo));
 
   return (
     <div className={styles.admincard} onMouseLeave={() => setMoreInfo(false)}>

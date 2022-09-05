@@ -479,8 +479,24 @@ const AdminComp = ()=>{
                 open={userOpen}
                 onClose={()=>{setUserOpen(false); setSelectedUser({}); }}
             >
-                <div>
-
+                <div className={styles.user_modal}>
+                    <h1>Kullanıcı Bilgileri</h1>
+                    <div>
+                        <p><strong>Ad Soyad :</strong></p>
+                        <p>{selectedUser.Name}</p>
+                    </div>
+                    <div>
+                        <p><strong>E-posta :</strong></p>
+                        <p>{selectedUser.Email}</p>
+                    </div>
+                    <div>
+                        <p><strong>Okul No :</strong></p>
+                        <p>{selectedUser.SchoolNo}</p>
+                    </div>
+                    <div>
+                        <p><strong>Telefon No :</strong></p>
+                        <p>{selectedUser.PhoneNo}</p>
+                    </div>
                 </div>
             </Modal>
 
