@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.scss'
-import { TextField } from '@mui/material';
+import { TextField, FormControl, FormGroup } from '@mui/material';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import {useRouter} from "next/router"
 import Link from "next/link";
@@ -9,13 +9,14 @@ import Right from "../public/right.svg";
 import RightWhite from "../public/right_white.svg";
 import Linkedin from "../public/linkedin.svg";
 import Insta from "../public/instagram.svg";
-import Twitter from "../public/twitter.svg";
+import Youtube from "../public/youtube.svg";
 import Particle from '../components/background/Particle';
 import Navbar from "../components/navbar/Navbar"
 import Card from '../components/Card';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
+import emailjs from "@emailjs/browser";
 
 const theme = createTheme({
   palette: {
@@ -26,8 +27,6 @@ const theme = createTheme({
 
 export default function Home() {
 
-
-
   const [threeNews, setThreeNews] = useState([]);
   useEffect(() => {
     axios.get(process.env.NEXT_PUBLIC_FIND_THREE_NEWS).then((e) => {
@@ -35,6 +34,17 @@ export default function Home() {
       console.log(e.data)
     })
   },[])
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm(process.env.NEXT_PUBLIC_service_id, process.env.NEXT_PUBLIC_template_id, e.target, process.env.NEXT_PUBLIC_user_id)
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  }
 
   const router = useRouter();
   return (
@@ -394,29 +404,38 @@ export default function Home() {
             Aklınıza takılan tüm soruları cevaplamak için buradayız.
           </p>
           <ThemeProvider theme={theme}>
-            <TextField 
-              id="outlined-basic" 
-              label="Eposta" 
-              variant="outlined" 
-              size="small"
-              className={styles.third_section__wrapper_email}
-            />
-            <TextField
-              id="outlined-multiline-static"
-              label="Mesajınız"
-              placeholder="Mesajınız"
-              size="small"
-              multiline
-              rows={8}
-              className={styles.third_section__wrapper_message}
-            />
+            <form onSubmit={sendEmail}>
+            <FormGroup style={{alignItems: "center"}}>
+              <TextField 
+                id="outlined-basic" 
+                label="Eposta" 
+                variant="outlined" 
+                size="small"
+                type="email"
+                name="email"
+                className={styles.third_section__wrapper_email}
+              />
+              <TextField
+                id="outlined-multiline-static"
+                label="Mesajınız"
+                placeholder="Mesajınız"
+                size="small"
+                multiline
+                type="text"
+                name="message"
+                rows={8}
+                className={styles.third_section__wrapper_message}
+              />
+              <button
+                className={styles.third_section__wrapper_button}
+                type="submit"
+              >
+                <p>Gönder</p>
+                <RightWhite />
+              </button>
+            </FormGroup>
+            </form>
           </ThemeProvider>
-          <button
-            className={styles.third_section__wrapper_button}
-          >
-            <p>Gönder</p>
-            <RightWhite />
-          </button>
         </div>
 
         <div className={styles.short_border}>
@@ -424,11 +443,6 @@ export default function Home() {
 
         <div className={styles.footer_section__wrapper}>
           <div className={styles.footer_section__wrapper_links}>
-            {/* <Link href="">
-              <a target={"_blank"}>
-                <Facebook />
-              </a>
-            </Link> */}
             <Link href="https://www.instagram.com/gaziyapayzeka/" target="_blank">
               <a target={"_blank"}>
                 <Insta />
@@ -441,7 +455,7 @@ export default function Home() {
             </Link>
             <Link href="">
               <a target={"_blank"}>
-                <Twitter />
+                <Youtube />
               </a>
             </Link>
           </div>

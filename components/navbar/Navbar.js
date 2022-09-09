@@ -8,7 +8,7 @@ import { AnimatePresence, motion, useCycle } from "framer-motion";
 import Hamburger from "hamburger-react";
 import Insta from "../../public/instagram.svg"
 import Logout from "../../public/logout.svg"
-import Twitter from "../../public/twitter.svg"
+import Youtube from "../../public/youtube.svg"
 import Linkedin from "../../public/linkedin.svg"
 import Link from "next/link"
 
@@ -134,6 +134,7 @@ export default function App() {
                               target={"_blank"}
                               whileHover={{ scale: 1.1 }}
                               variants={itemVariants}
+                              href="https://www.instagram.com/gaziyapayzeka/"
                           >
                                   
                               <Insta />
@@ -144,6 +145,7 @@ export default function App() {
                               target={"_blank"}
                               whileHover={{ scale: 1.1 }}
                               variants={itemVariants}
+                              href="https://www.linkedin.com/company/gazi-%C3%BCniversitesi-yapay-zeka-toplulu%C4%9Fu/?originalSubdomain=tr"
                           >
                               <Linkedin />
                           </motion.a>
@@ -154,7 +156,7 @@ export default function App() {
                               whileHover={{ scale: 1.1 }}
                               variants={itemVariants}
                           >
-                              <Twitter />
+                              <Youtube />
                           </motion.a>
                       </Link>
                   </div>

@@ -11,7 +11,7 @@ import Right from "../../public/right.svg";
 import RightWhite from "../../public/right_white.svg";
 import Linkedin from "../../public/linkedin.svg";
 import Insta from "../../public/instagram.svg";
-import Twitter from "../../public/twitter.svg";
+import Youtube from "../../public/youtube.svg";
 
 const SingleNews = () => {
     const router = useRouter();
@@ -95,7 +95,7 @@ export const Wrapper = () => {
             </Link>
             <Link href="">
               <a target={"_blank"}>
-                <Twitter />
+                <Youtube />
               </a>
             </Link>
           </div>

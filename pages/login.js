@@ -107,6 +107,7 @@ const LoginComponent = ({ onTypeChange = () => {} }) => {
 const RegisterComponent = ({ onTypeChange }) => {
   const dispatch = useDispatch();
   const { setCurrentUser } = bindActionCreators(actionCreators, dispatch);
+  const router = useRouter();
 
   const [type, setType] = useState(false);
   const [password, setPassword] = useState("");
