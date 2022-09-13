@@ -51,7 +51,13 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>Gazi Yapay Zeka</title>
-        <meta name="Gazi Yapay Zeka" content="Gazi Yapay Zeka Topluluğu" />
+        <meta name="title" content="Gazi Yapay Zeka" />
+        <meta name="description" content="Gazi Üniversitesi Yapay Zeka Topluluğu Websitesi" />
+        <meta name="keywords" content="gazi üniversitesi,gazi üniversitesi mühendislik fakültesi,gazi üniversitesi topluluk,yapay zeka,yapay zeka topluluğu,gazi üniversitesi yapay zeka,gazi üniversitesi yapay zeka topluluğu,gazi yapay zeka,gazi yapay zeka topluluğu,gazi ai,gazi ai topluluğu,gazi artificial intelligence,gazi artificial intelligence topluluğu,gazi artificial intelligence society,yapay zekâ,gazi üniversitesi,gazi,gazi üni,topluluk,makine öğrenmesi,yapay zeka ve makine öğrenmesi,gazi yapay zeka yönetim sistemi,gazi yapay zeka login,yapay zeka login,yapay zeka haberleri,yapay zeka yönetim sistemi" />
+        <meta name="robots" content="index, follow" />
+        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="language" content="English" />
+        <meta name="revisit-after" content="2 days" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
