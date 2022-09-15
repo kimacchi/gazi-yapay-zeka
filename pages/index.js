@@ -58,6 +58,7 @@ export default function Home() {
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="language" content="English" />
         <meta name="revisit-after" content="2 days" />
+        <meta name="google-site-verification" content="76-Wt0MUo1T-iXeAZNbhS_BdxClH-jHAZI4_y48yuds" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
