@@ -6,7 +6,10 @@ import {
   InputLabel,
   FormControl,
   ThemeProvider,
-  createTheme
+  createTheme,
+  Modal,
+  Alert,
+  AlertTitle
 } from "@mui/material";
 import { useRouter } from "next/router";
 import { useDispatch, useSelector } from "react-redux";
@@ -121,42 +124,65 @@ const RegisterComponent = ({ onTypeChange }) => {
     onTypeChange(true);
   };
 
+  const [errorPopup, setErrorPopup] = useState(false);
+
   const onRegsiter = () => {
-    axios
-      .post(
-        process.env.NEXT_PUBLIC_REGISTER,
-        {
-          Email: email,
-          Password: password,
-          Name: name,
-          Type: "user",
-          PhoneNo: phoneNo,
-          SchoolNo: schoolNo,
-        },
-        {
-          headers: { "Content-Type": "application/json" },
-        }
-      )
-      .then((e) => {
-        axios
-        .post(process.env.NEXT_PUBLIC_LOGIN, {
-          Email: email,
-          Password: password,
-        })
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/gi;
+    if(re.test(String(email).toLowerCase())){
+      axios
+        .post(
+          process.env.NEXT_PUBLIC_REGISTER,
+          {
+            Email: email.trim(),
+            Password: password.trim(),
+            Name: name.trim(),
+            Type: "user",
+            PhoneNo: phoneNo.trim(),
+            SchoolNo: schoolNo.trim(),
+          },
+          {
+            headers: { "Content-Type": "application/json" },
+          }
+        )
         .then((e) => {
-          const token = e.data.token;
-          axios.get(process.env.NEXT_PUBLIC_FIND_USER + e.data.id, {
-            headers: {'Content-Type': 'application/json', "Authorization": token}
-          }).then((ele)=>{
-            setCurrentUser({...ele.data, token});
-            router.push("/events");
+          axios
+          .post(process.env.NEXT_PUBLIC_LOGIN, {
+            Email: email,
+            Password: password,
           })
+          .then((e) => {
+            const token = e.data.token;
+            axios.get(process.env.NEXT_PUBLIC_FIND_USER + e.data.id, {
+              headers: {'Content-Type': 'application/json', "Authorization": token}
+            }).then((ele)=>{
+              setCurrentUser({...ele.data, token});
+              router.push("/events");
+            })
+          });
         });
-      });
+    }else{
+      setErrorPopup(true);
+      setTimeout(()=>{
+          setErrorPopup(false);
+      }, 2000);
+    }
   };
 
   return (
     <NoSsr>
+      <Modal
+        open={errorPopup}
+        onClose={()=>{setErrorPopup(false)}}
+      >
+        <div
+            style={{width: "100vw", height: "100vh", display: "flex", alignItems: "center", justifyContent: "center"}}
+        >
+            <Alert severity="error" style={{width: "28.5vw"}}>
+                <AlertTitle>Hata!</AlertTitle>
+                Bilgilerinizi kontrol edin veya yönetimle iletişime geçin.
+            </Alert>
+        </div>
+      </Modal>
       <div className={styles.register__wrapper}>
         <p className={styles.gradient}>Yapay Zeka Topluluğu</p>
         <div className={styles.register__wrapper_input_container}>
@@ -171,7 +197,7 @@ const RegisterComponent = ({ onTypeChange }) => {
             onValueChange={(e) => {
               setEmail(e);
             }}
-            type="text"
+            type="email"
             label="Email"
           />
           <CustomInput
@@ -185,15 +211,14 @@ const RegisterComponent = ({ onTypeChange }) => {
             onValueChange={(e) => {
               setSchoolNo(e);
             }}
-            type="text"
+            type="number"
             label="Öğrenci no"
           />
-
           <CustomInput
             onValueChange={(e) => {
               setPhoneNo(e);
             }}
-            type="text"
+            type="number"
             label="Telefon no"
           />
         </div>

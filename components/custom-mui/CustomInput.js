@@ -17,18 +17,8 @@ const CustomInput = ({label = "", type="text", onValueChange=()=>{}}) => {
   return (
     <>
       {
-        type === "text" ? 
-          <div className={styles.container}>
-              <input 
-                placeholder={label}
-                value={text}
-                className={styles.input}
-                type="text"
-                onChange={onHandleChange}
-              />
-              
-          </div>
-          :
+        type === "password" ? 
+          
           <div className={styles.container}>
               <input 
                 placeholder={label}
@@ -46,7 +36,18 @@ const CustomInput = ({label = "", type="text", onValueChange=()=>{}}) => {
                 }
               </div>
           </div>
-
+          :
+          <div className={styles.container}>
+              <input 
+                placeholder={label}
+                value={text}
+                className={styles.input}
+                type={type}
+                onChange={onHandleChange}
+                
+              />
+              
+          </div>
       }
     </>
   )
