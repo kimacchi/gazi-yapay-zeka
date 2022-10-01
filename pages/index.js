@@ -392,6 +392,16 @@ export default function Home() {
                 <Card 
                   admin={
                     {
+                      name:"Bahadır Gökdemir", 
+                      image:"bahadirgokdemir", 
+                      linkedin: "/", 
+                      job: "Derin Öğrenme Komitesi Sosyal Medya Sorumlusu",
+                      sum: ""
+                    }}
+                />
+                <Card 
+                  admin={
+                    {
                       name:"Ahmet Ergül", 
                       image:"ahmetergul", 
                       linkedin: "https://www.linkedin.com/in/ahmet-erg%C3%BCl-547b25224/", 
@@ -399,7 +409,8 @@ export default function Home() {
                       sum: ""
                     }}
                 />
-                <div className={styles.aligner}></div>
+                
+                {/* <div className={styles.aligner}></div> */}
               </div>
             </div>
           </div>
@@ -412,6 +423,23 @@ export default function Home() {
           <div
             className={styles.cluster}
           >
+            <a
+              target="_blank"
+              href={`https://www.isinaydinlatma.com.tr/`}
+              rel="noopener noreferrer"
+            >
+              <div
+                className={`${styles.sponsor} ${styles.silver}`}
+              >
+                  <Image 
+                    // layout="fill"
+                    objectFit="cover"
+                    alt="sponsor"
+                    src={isindaylight}
+                    className={styles.img}
+                  />
+              </div>
+            </a>
             <a
               target="_blank"
               href={`https://www.modadil.com/`}
@@ -429,23 +457,7 @@ export default function Home() {
                   />
               </div>
             </a>
-            <a
-              target="_blank"
-              href={`https://www.isinaydinlatma.com.tr/`}
-              rel="noopener noreferrer"
-            >
-              <div
-                className={styles.sponsor}
-              >
-                  <Image 
-                    // layout="fill"
-                    objectFit="cover"
-                    alt="sponsor"
-                    src={isindaylight}
-                    className={styles.img}
-                  />
-              </div>
-            </a>
+            
           </div>
         </div>
 
