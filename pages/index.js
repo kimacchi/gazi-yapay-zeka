@@ -390,9 +390,9 @@ export default function Home() {
                 <Card 
                   admin={
                     {
-                      name:"Samet Sarper Dinç", 
-                      image:"sametsarperdinc", 
-                      linkedin: "https://www.linkedin.com/in/samet-sarper-din%C3%A7-7a8677228/", 
+                      name:"Ahmet Ergül", 
+                      image:"ahmetergul", 
+                      linkedin: "https://www.linkedin.com/in/ahmet-erg%C3%BCl-547b25224/", 
                       job: "Derin Öğrenme Komitesi Proje Sorumlusu",
                       sum: ""
                     }}
