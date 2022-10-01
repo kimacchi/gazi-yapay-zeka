@@ -17,6 +17,8 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import emailjs from "@emailjs/browser";
+import modadil from "../public/images/sponsors/modadil.png"
+import isindaylight from "../public/images/sponsors/isindaylight.png"
 
 const theme = createTheme({
   palette: {
@@ -400,6 +402,50 @@ export default function Home() {
                 <div className={styles.aligner}></div>
               </div>
             </div>
+          </div>
+        </div>
+
+        <div
+          className={styles.sponsors}
+        >
+          <h1>SPONSORLARIMIZ</h1>
+          <div
+            className={styles.cluster}
+          >
+            <a
+              target="_blank"
+              href={`https://www.modadil.com/`}
+              rel="noopener noreferrer"
+            >
+              <div
+                className={styles.sponsor}
+              >
+                  <Image 
+                    // layout="fill"
+                    objectFit="cover"
+                    alt="sponsor"
+                    src={modadil}
+                    className={styles.img}
+                  />
+              </div>
+            </a>
+            <a
+              target="_blank"
+              href={`https://www.isinaydinlatma.com.tr/`}
+              rel="noopener noreferrer"
+            >
+              <div
+                className={styles.sponsor}
+              >
+                  <Image 
+                    // layout="fill"
+                    objectFit="cover"
+                    alt="sponsor"
+                    src={isindaylight}
+                    className={styles.img}
+                  />
+              </div>
+            </a>
           </div>
         </div>
 
