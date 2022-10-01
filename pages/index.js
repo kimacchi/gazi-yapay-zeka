@@ -392,16 +392,6 @@ export default function Home() {
                 <Card 
                   admin={
                     {
-                      name:"Bahadır Gökdemir", 
-                      image:"bahadirgokdemir", 
-                      linkedin: "/", 
-                      job: "Derin Öğrenme Komitesi Sosyal Medya Sorumlusu",
-                      sum: ""
-                    }}
-                />
-                <Card 
-                  admin={
-                    {
                       name:"Ahmet Ergül", 
                       image:"ahmetergul", 
                       linkedin: "https://www.linkedin.com/in/ahmet-erg%C3%BCl-547b25224/", 
@@ -409,6 +399,17 @@ export default function Home() {
                       sum: ""
                     }}
                 />
+                <Card 
+                  admin={
+                    {
+                      name:"Bahadır Gökdemir", 
+                      image:"bahadirgokdemir", 
+                      linkedin: "/", 
+                      job: "Derin Öğrenme Komitesi Sosyal Medya Sorumlusu",
+                      sum: ""
+                    }}
+                />
+                
                 
                 {/* <div className={styles.aligner}></div> */}
               </div>
