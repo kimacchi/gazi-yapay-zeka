@@ -93,7 +93,7 @@ export const Wrapper = () => {
                 <Linkedin />
               </a>
             </Link>
-            <Link href="">
+            <Link href="https://www.youtube.com/channel/UCpxJfBA_FnleFeA0WYvereA">
               <a target={"_blank"}>
                 <Youtube />
               </a>

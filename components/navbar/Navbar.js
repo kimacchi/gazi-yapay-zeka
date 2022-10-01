@@ -150,7 +150,7 @@ export default function App() {
                               <Linkedin />
                           </motion.a>
                       </Link>
-                      <Link href="">
+                      <Link href="https://www.youtube.com/channel/UCpxJfBA_FnleFeA0WYvereA">
                           <motion.a 
                               target={"_blank"}
                               whileHover={{ scale: 1.1 }}
