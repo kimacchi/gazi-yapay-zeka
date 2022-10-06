@@ -343,6 +343,7 @@ const AdminComp = ()=>{
     const [eventDate, setEventDate] = useState("");
     const [eventDescription, setEventDescription] = useState("");
     const [eventDeadline, setEventDeadline] = useState(new Date());
+    const [eventMax, setEventMax] = useState(0);
 
     const createNewEvent = () => {
         axios.post(process.env.NEXT_PUBLIC_ADD_EVENT, {
@@ -351,7 +352,8 @@ const AdminComp = ()=>{
             "Deadline": eventDeadline,
             "Participants": [],
             "Description": eventDescription,
-            Place: eventPlace
+            "MaxParticipant": eventMax,
+            "Place": eventPlace,
         }, {
             headers: {'Content-Type': 'application/json', "Authorization": currentUser.token}
         }).then(() => {
@@ -431,6 +433,17 @@ const AdminComp = ()=>{
                             label="Etkinlik tarihi"
                             value={eventDate}
                             onChange={(e)=>{setEventDate(e.target.value)}}
+                            className={styles.text_field}
+                        />
+                    </ThemeProvider>
+                    <ThemeProvider theme={theme}>
+                        <TextField 
+                            size="small"
+                            variant="outlined"
+                            label="Max Katılımcı"
+                            type="number"
+                            value={eventMax}
+                            onChange={(e)=>{setEventMax(parseInt(e.target.value))}}
                             className={styles.text_field}
                         />
                     </ThemeProvider>
