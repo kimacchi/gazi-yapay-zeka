@@ -87,129 +87,128 @@ export default function Home() {
             <Down />
           </button>
         </div>
-        {threeNews ? 
-          undefined
-          :
-          <div className={styles.second_section__wrapper} id="haberler">
-            <div className={styles.second_section__wrapper_post__1}>
-              <div className={styles.second_section__wrapper_post_information}>
-                <p className={styles.second_section__wrapper_post_information_category}>
-                  {threeNews[2] !== undefined ? threeNews[2].Category[0] : ""}
-                </p>
-                <p className={styles.second_section__wrapper_post_information_header}>
-                  {threeNews[2] !== undefined ? threeNews[2].Title : ""}
-                </p>
-                <p className={styles.second_section__wrapper_post_information_sum}>
-                  {threeNews[2] !== undefined ? threeNews[2].Summary : ""}
-                </p>
-                <button
-                  className={styles.second_section__wrapper_post_button}
-                  onClick={() => {
-                    if(threeNews[2] !== undefined){
-                      router.push("/haberler/" + threeNews[2]._id);
-                    }
-                  }}
-                >
-                  <p>DEVAMI</p>
-                  <Right />
-                </button>
-              </div>
-              <div className={styles.second_section__wrapper_post_image}>
-                {
-                  threeNews[2] !== undefined ?
-                    <Image  
-                      src={threeNews[2].imgURL}
-                      alt="news image"
-                      layout='fill'
-                    />
-                    :
-                    undefined
-                }
-              </div>
+        {/* {threeNews === undefined ? 
+        
+        } */}
+        <div className={styles.second_section__wrapper} id="haberler">
+          <div className={styles.second_section__wrapper_post__1}>
+            <div className={styles.second_section__wrapper_post_information}>
+              <p className={styles.second_section__wrapper_post_information_category}>
+                {threeNews[2] !== undefined ? threeNews[2].Category[0] : ""}
+              </p>
+              <p className={styles.second_section__wrapper_post_information_header}>
+                {threeNews[2] !== undefined ? threeNews[2].Title : ""}
+              </p>
+              <p className={styles.second_section__wrapper_post_information_sum}>
+                {threeNews[2] !== undefined ? threeNews[2].Summary : ""}
+              </p>
+              <button
+                className={styles.second_section__wrapper_post_button}
+                onClick={() => {
+                  if(threeNews[2] !== undefined){
+                    router.push("/haberler/" + threeNews[2]._id);
+                  }
+                }}
+              >
+                <p>DEVAMI</p>
+                <Right />
+              </button>
             </div>
-            <div className={styles.second_section__wrapper_post__2}>
-              <div className={styles.second_section__wrapper_post_information}>
-                <p className={styles.second_section__wrapper_post_information_category}>
-                  {threeNews[1] !== undefined ? threeNews[1].Category[0] : ""}
-                </p>
-                <p className={styles.second_section__wrapper_post_information_header}>
-                  {threeNews[1] !== undefined ? threeNews[1].Title : ""}
-                </p>
-                <p className={styles.second_section__wrapper_post_information_sum}>
-                  {threeNews[1] !== undefined ? threeNews[1].Summary : ""}
-                </p>
-                <button
-                  className={styles.second_section__wrapper_post_button}
-                  onClick={() => {
-                    if(threeNews[1] !== undefined){
-                      router.push("/haberler/" + threeNews[1]._id);
-                    }
-                  }}
-                >
-                  <p>DEVAMI</p>
-                  <Right />
-                </button>
-              </div>
-              <div className={styles.second_section__wrapper_post_image}>
-                {
-                  threeNews[1] !== undefined ?
-                    <Image  
-                      src={threeNews[1].imgURL}
-                      alt="news image"
-                      layout='fill'
-                    />
-                    :
-                    undefined
-                }
-              </div>
+            <div className={styles.second_section__wrapper_post_image}>
+              {
+                threeNews[2] !== undefined ?
+                  <Image  
+                    src={threeNews[2].imgURL}
+                    alt="news image"
+                    layout='fill'
+                  />
+                  :
+                  undefined
+              }
             </div>
-            <div className={styles.second_section__wrapper_post__1}>
-              <div className={styles.second_section__wrapper_post_information}>
-                <p className={styles.second_section__wrapper_post_information_category}>
-                  {threeNews[0] !== undefined ? threeNews[0].Category[0] : ""}
-                </p>
-                <p className={styles.second_section__wrapper_post_information_header}>
-                  {threeNews[0] !== undefined ? threeNews[0].Title : ""}
-                </p>
-                <p className={styles.second_section__wrapper_post_information_sum}>
-                  {threeNews[0] !== undefined ? threeNews[0].Summary : ""}
-                </p>
-                <button
-                  className={styles.second_section__wrapper_post_button}
-                  onClick={() => {
-                    if(threeNews[0] !== undefined){
-                      router.push("/haberler/" + threeNews[0]._id);
-                    }
-                  }}
-                >
-                  <p>DEVAMI</p>
-                  <Right />
-                </button>
-              </div>
-              <div className={styles.second_section__wrapper_post_image}>
-                {
-                  threeNews[0] !== undefined ?
-                    <Image  
-                      src={threeNews[0].imgURL}
-                      alt="news image"
-                      layout='fill'
-                    />
-                    :
-                    undefined
-                }
-              </div>
-            </div>
-            <button
-              className={styles.second_section__wrapper_button}
-              onClick={() => {
-                  router.push("/haberler");
-              }}
-            >
-              <p>TÜM HABERLER</p>
-              <RightWhite />
-            </button>
           </div>
-        }
+          <div className={styles.second_section__wrapper_post__2}>
+            <div className={styles.second_section__wrapper_post_information}>
+              <p className={styles.second_section__wrapper_post_information_category}>
+                {threeNews[1] !== undefined ? threeNews[1].Category[0] : ""}
+              </p>
+              <p className={styles.second_section__wrapper_post_information_header}>
+                {threeNews[1] !== undefined ? threeNews[1].Title : ""}
+              </p>
+              <p className={styles.second_section__wrapper_post_information_sum}>
+                {threeNews[1] !== undefined ? threeNews[1].Summary : ""}
+              </p>
+              <button
+                className={styles.second_section__wrapper_post_button}
+                onClick={() => {
+                  if(threeNews[1] !== undefined){
+                    router.push("/haberler/" + threeNews[1]._id);
+                  }
+                }}
+              >
+                <p>DEVAMI</p>
+                <Right />
+              </button>
+            </div>
+            <div className={styles.second_section__wrapper_post_image}>
+              {
+                threeNews[1] !== undefined ?
+                  <Image  
+                    src={threeNews[1].imgURL}
+                    alt="news image"
+                    layout='fill'
+                  />
+                  :
+                  undefined
+              }
+            </div>
+          </div>
+          <div className={styles.second_section__wrapper_post__1}>
+            <div className={styles.second_section__wrapper_post_information}>
+              <p className={styles.second_section__wrapper_post_information_category}>
+                {threeNews[0] !== undefined ? threeNews[0].Category[0] : ""}
+              </p>
+              <p className={styles.second_section__wrapper_post_information_header}>
+                {threeNews[0] !== undefined ? threeNews[0].Title : ""}
+              </p>
+              <p className={styles.second_section__wrapper_post_information_sum}>
+                {threeNews[0] !== undefined ? threeNews[0].Summary : ""}
+              </p>
+              <button
+                className={styles.second_section__wrapper_post_button}
+                onClick={() => {
+                  if(threeNews[0] !== undefined){
+                    router.push("/haberler/" + threeNews[0]._id);
+                  }
+                }}
+              >
+                <p>DEVAMI</p>
+                <Right />
+              </button>
+            </div>
+            <div className={styles.second_section__wrapper_post_image}>
+              {
+                threeNews[0] !== undefined ?
+                  <Image  
+                    src={threeNews[0].imgURL}
+                    alt="news image"
+                    layout='fill'
+                  />
+                  :
+                  undefined
+              }
+            </div>
+          </div>
+          <button
+            className={styles.second_section__wrapper_button}
+            onClick={() => {
+                router.push("/haberler");
+            }}
+          >
+            <p>TÜM HABERLER</p>
+            <RightWhite />
+          </button>
+        </div>
 
         <div className={styles.admin_card_section}>
           <div className={styles.admin_card_section_kurucu}>
