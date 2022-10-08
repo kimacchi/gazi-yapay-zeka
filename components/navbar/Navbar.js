@@ -116,16 +116,21 @@ export default function App() {
                     }
                 </div>
                 <div className={styles.wrapper_2}>
-                  <motion.div
-                    whileHover={{scale:1.1}}
-                    className={styles.logout}
-                    onClick={() => {
-                      setCurrentUser({});
-                      router.push("/");
-                    }}
-                  >
-                    <Logout />
-                  </motion.div>
+                {
+                  currentUser.userId ? 
+                    <motion.div
+                      whileHover={{scale:1.1}}
+                      className={styles.logout}
+                      onClick={() => {
+                        setCurrentUser({});
+                        router.push("/");
+                      }}
+                    >
+                      <Logout />
+                    </motion.div>
+                    :
+                    undefined
+                }
                   <div
                       className={styles.social_links}
                   >
