@@ -50,7 +50,7 @@ export default function App() {
   const links = [
     { name: "Anasayfa", to: "/", id: 1 },
     { name: "Haberler", to: "/haberler", id: 2 },
-    { name: "Yönetim Sistemi", to: `${currentUser.userId ? "/events" : "/login"}`, id: 3 },
+    { name: currentUser.userId ? "Yönetim Sistemi" : "Giriş Yap", to: `${currentUser.userId ? "/events" : "/login"}`, id: 3 },
   ];
   
   const adminLinks = [

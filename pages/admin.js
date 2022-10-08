@@ -308,6 +308,7 @@ const AdminComp = ()=>{
         setUsers(e.data);
        })
     }, [])
+    console.log(currentUser.token);
 
     const [width, setWidth] = useState(851)
     useEffect(()=>{
