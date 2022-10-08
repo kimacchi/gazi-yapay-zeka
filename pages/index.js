@@ -87,10 +87,9 @@ export default function Home() {
             <Down />
           </button>
         </div>
-        {threeNews === undefined ? 
+        {threeNews ? 
           undefined
           :
-
           <div className={styles.second_section__wrapper} id="haberler">
             <div className={styles.second_section__wrapper_post__1}>
               <div className={styles.second_section__wrapper_post_information}>
