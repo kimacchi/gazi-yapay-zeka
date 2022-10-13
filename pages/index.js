@@ -127,7 +127,7 @@ export default function Home() {
               }
             </div>
           </div>
-          <div className={styles.second_section__wrapper_post__2}>
+          {/* <div className={styles.second_section__wrapper_post__2}>
             <div className={styles.second_section__wrapper_post_information}>
               <p className={styles.second_section__wrapper_post_information_category}>
                 {threeNews[1] !== undefined ? threeNews[1].Category[0] : ""}
@@ -162,7 +162,7 @@ export default function Home() {
                   undefined
               }
             </div>
-          </div>
+          </div> */}
           <div className={styles.second_section__wrapper_post__1}>
             <div className={styles.second_section__wrapper_post_information}>
               <p className={styles.second_section__wrapper_post_information_category}>
@@ -420,7 +420,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div
+        {/* <div
           className={styles.sponsors}
         >
           <h1>SPONSORLARIMIZ</h1>
@@ -463,7 +463,7 @@ export default function Home() {
             </a>
             
           </div>
-        </div>
+        </div> */}
 
         <div className={styles.third_section__wrapper}>
           <p className={styles.third_section__wrapper_header}>
