@@ -140,6 +140,8 @@ const EventList = ()=>{
                                                 }
                                                 return false;
                                             }).length > 0 
+                                            ||
+                                            ele.Participants.length >= ele.MaxParticipant
                                         } 
                                         onClick={() => {
                                             axios.post(process.env.NEXT_PUBLIC_ADD_TO_EVENT + currentUser.userId + "/" + ele._id, {}, {
