@@ -11,6 +11,23 @@
     top: 0;
 }
 
+
+.forgot_my_password{
+    background-color: #2c2c2c;
+    position: absolute;
+    width: 40vw;
+    height: 40vh;
+    top: 30vh;
+    left: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-family: "Inter";
+    padding: 0 2rem 1rem 2rem;
+    border-radius: 1rem;
+}
+
 .container{
     height: 100%;
     overflow-y: hidden;
@@ -207,7 +224,21 @@
     //     bottom: 0px;
     //     top: 77%;
     // }
-    
+    .forgot_my_password{
+        background-color: #2c2c2c;
+        position: absolute;
+        width: 90vw;
+        height: 60vh;
+        top: 20vh;
+        left: 5vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        font-family: "Inter";
+        padding: 0 1rem 1rem 1rem;
+        border-radius: 1rem;
+    }
     .container{
         height: 100%;
         overflow-y: hidden;

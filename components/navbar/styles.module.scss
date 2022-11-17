@@ -110,6 +110,7 @@
     //     margin-bottom: 6vh;
     // }
     .aside {
+      z-index: 1;
         background: hsla(216, 69%, 15%, 1);
 
         background: linear-gradient(270deg, hsla(216, 69%, 15%, 0.8) 0%, rgba(27, 28, 29, 0.8) 100%);

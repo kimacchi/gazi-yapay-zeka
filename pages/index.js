@@ -30,6 +30,8 @@ const theme = createTheme({
 export default function Home() {
 
   const [threeNews, setThreeNews] = useState([]);
+  const [email, setEmail] = useState("");
+
   useEffect(() => {
     axios.get(process.env.NEXT_PUBLIC_FIND_THREE_NEWS).then((e) => {
       setThreeNews(e.data);
@@ -127,7 +129,7 @@ export default function Home() {
               }
             </div>
           </div>
-          {/* <div className={styles.second_section__wrapper_post__2}>
+          <div className={styles.second_section__wrapper_post__2}>
             <div className={styles.second_section__wrapper_post_information}>
               <p className={styles.second_section__wrapper_post_information_category}>
                 {threeNews[1] !== undefined ? threeNews[1].Category[0] : ""}
@@ -162,7 +164,7 @@ export default function Home() {
                   undefined
               }
             </div>
-          </div> */}
+          </div>
           <div className={styles.second_section__wrapper_post__1}>
             <div className={styles.second_section__wrapper_post_information}>
               <p className={styles.second_section__wrapper_post_information_category}>
@@ -543,6 +545,16 @@ export default function Home() {
             © Gazi Üniversitesi. Tüm hakları saklıdır.
           </p>
         </div>
+
+        {/* <input onChange={(e) => {setEmail(e.target.value)}}>
+        </input>
+        <button onClick={() => {
+          axios.post("https://yzt-backend.vercel.app/users/resetPassword", {
+            UserEmail: email,
+            DateNow: new Date(),
+            Expire: 3600000
+          }).then((e) => console.log(e)).catch(err=>console.log(err));
+        }}>gönder</button> */}
 
       </main>
 

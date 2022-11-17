@@ -9,8 +9,10 @@ import {
   createTheme,
   Modal,
   Alert,
-  AlertTitle
+  AlertTitle,
+  Button,
 } from "@mui/material";
+import {LoadingButton} from '@mui/lab';
 import { useRouter } from "next/router";
 import { useDispatch, useSelector } from "react-redux";
 import { bindActionCreators } from "redux";
@@ -47,6 +49,11 @@ const LoginComponent = ({ onTypeChange = () => {} }) => {
   const [email, setEmail] = useState("");
   const [type, setType] = useState(true);
 
+  const [open, setOpen] = useState(false);
+  const [recoveryEmail, setRecoveryEmail] = useState("");
+
+  const [loading, setLoading] = useState(false);
+
   const typeHandler = () => {
     setType(false);
     onTypeChange(false);
@@ -71,6 +78,47 @@ const LoginComponent = ({ onTypeChange = () => {} }) => {
 
   return (
     <NoSsr>
+      <Modal
+        open={open}
+        onClose={() => setOpen(false)}
+      >
+        <div className={styles.forgot_my_password}>
+          <h2>Şifreni mi unuttun?</h2>
+          <p>Değiştirmende yardımcı olalım. Aşağıda girdiğin e-posta adresine gelen linke tıkla. {"(Spam kutusunu kontrol etmeyi unutma.)"}</p>
+          <ThemeProvider theme={darkTheme}>
+
+            <TextField 
+              variant="outlined"
+              className={styles.recovery_email_input}
+              placeholder="E-posta adresin"
+              size="small"
+              type="email"
+              onChange={(e) => {
+                setRecoveryEmail(e.target.value);
+              }}
+            >
+            </TextField>
+            
+              <LoadingButton
+                variant="outlined"
+                loading={loading}
+                onClick={() => {
+                  setLoading(true);
+                  axios.post("https://yzt-backend.vercel.app/users/resetPassword", {
+                    UserEmail: recoveryEmail,
+                    DateNow: new Date(),
+                    Expire: 3600000
+                  }).then((e) => {console.log("successfull"); setOpen(false); setLoading(false)}).catch(err=>{console.log(err); setLoading(false);alert("İşlem başarısız oldu.")});
+                }}
+                className={styles.recovery_email_button}
+                size="medium"
+              >
+                GÖNDER
+              </LoadingButton>
+            
+          </ThemeProvider>
+        </div>
+      </Modal>
       <div className={styles.login__wrapper}>
         <p className={styles.gradient}>Yapay Zeka Topluluğu</p>
         <div className={styles.login__wrapper_input_container}>
@@ -95,7 +143,9 @@ const LoginComponent = ({ onTypeChange = () => {} }) => {
           <p onClick={typeHandler}>
             Hesabın yok mu? <strong>Kayıt ol.</strong>
           </p>
-          <p>
+          <p
+            onClick={() => setOpen(true)}  
+          >
             Şifreni mi unuttun? <strong>Yardım al.</strong>
           </p>
           <button className={styles.button} onClick={onLogin}>
