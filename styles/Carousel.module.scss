@@ -1,0 +1,97 @@
+.container{
+    background-color: rgb(25, 25, 25);
+    // background-color: white;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  .card_container{
+    display: flex;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    overflow: hidden;
+    gap: 50px;
+    background-color: inherit;
+  }
+  
+  .img{
+    width: 300p;
+    height: 500px;
+    object-fit: cover;
+    margin-right: 40px;
+    object-position: 50% center ;
+    position: relative;
+  }
+
+  .trigger_buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    margin-left: 50px;
+    button{
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+      height: 27px;
+      font-size: 20px;
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+      display: inline-block;
+        position: relative;
+    }
+    button:after{
+      content: '';
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 0.1vw;
+      bottom: 0;
+      left: 0;
+      background-color: #FFF;
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+    button:hover:after{
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+    .selected:after{
+      content: '';
+      position: absolute;
+      width: 100%;
+      transform: scaleX(1);
+      height: 0.1vw;
+      bottom: 0;
+      left: 0;
+      background-color: #FFF;
+      transform-origin: bottom right;
+    }
+  }
+
+
+
+@media screen and (max-width: 750px) {
+  
+  .trigger_buttons{
+    margin-left: 10px;
+    button{
+      width: 150px;
+      height: unset;
+      // height: 20px;
+      font-size: 16px;
+    }
+  }
+}
+  
+  
