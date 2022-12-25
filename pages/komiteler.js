@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from 'react'
 import Image from "next/image"
 import { v4 } from 'uuid'
 import Card from '../components/Card'
+import Navbar from "../components/navbar/Navbar";
 
 // storing the images in an array for convenience.
 
@@ -288,12 +289,16 @@ export default function Carousel() {
     const handleTrigger = (e) =>{
         setList(e);
     }
+    useEffect(() => {setList(yonetim)}, [])
 
   return (
     <div 
       className={styles.container} 
       style={{overflow: "hidden"}}
     >
+        <div className={styles.navbar}>
+          <Navbar />
+        </div>
       <div className={styles.trigger_buttons}>
         <button 
             onClick={() => handleTrigger(yonetim)}

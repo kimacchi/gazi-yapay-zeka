@@ -262,164 +262,12 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className={styles.admin_card_section_yonetici}>
-            <h1>Yönetim</h1>
-            <div className={styles.cards}>
-              <Card 
-                admin={
-                  {
-                    name:"Dilara Çelik", 
-                    image:"dilaracelik", 
-                    linkedin: "https://www.linkedin.com/in/dilara-%C3%A7elik-93a1191b4/", 
-                    job: "Yönetim Kurulu Başkanı",
-                    sum: ""
-                  }}
-              />
-              <Card 
-                admin={
-                  {
-                    name:"Ümitcan Zanbak", 
-                    image:"umitcanzanbak", 
-                    linkedin: "https://www.linkedin.com/in/%C3%BCmitcan-zanbak-0745a11b3/", 
-                    job: "İç İlişkilerden Sorumlu Başkan Yardımcısı",
-                    sum: ""
-                  }}
-              />
-              <Card 
-                admin={
-                  {
-                    name:"Yakup Can Özdemir", 
-                    image:"yakupcanozdemir", 
-                    linkedin: "https://www.linkedin.com/in/yakup-%C3%B6zdemir-ab9216224/", 
-                    job: "Dış İlişkilerden Sorumlu Başkan Yardımcısı",
-                    sum: ""
-                  }}
-              />
-              <Card 
-                admin={
-                  {
-                    name:"Kürşat Erdoğan", 
-                    image:"kursaterdogan", 
-                    linkedin: "https://www.linkedin.com/in/k%C3%BCr%C5%9Fat-erdo%C4%9Fan-668a20235/", 
-                    job: "Genel Sekreter",
-                    sum: ""
-                  }}
-              />
-            </div>
-          </div>
-          <div className={styles.admin_card_section_yetkili}>
-            <h1>İdari Kurul</h1>
-            <div className={styles.cards}>
-              <div className={styles.first_cards}>
-                <Card 
-                  admin={
-                    {
-                      name:"Mert Aydoğan", 
-                      image:"mertaydogan", 
-                      linkedin: "https://www.linkedin.com/in/mert-aydo%C4%9Fan-2a42a4213/", 
-                      job: "Makine Öğrenmesi Komite Başkanı",
-                      sum: ""
-                    }}
-                />
-                <Card 
-                  admin={
-                    {
-                      name:"Ümit Emre İlhan", 
-                      image:"umitemreilhan", 
-                      linkedin: "https://www.linkedin.com/in/%C3%BCmit-emre-ilhan-791b93209/", 
-                      job: "Makine Öğrenmesi Komite Başkan Yardımcısı",
-                      sum: ""
-                    }}
-                />
-                <Card 
-                  admin={
-                    {
-                      name:"Ebru Nur Uslu", 
-                      image:"ebrunuruslu", 
-                      linkedin: "https://www.linkedin.com/in/ebru-nur-u-a60163210/", 
-                      job: "Makine Öğrenmesi Komitesi Proje Sorumlusu",
-                      sum: ""
-                    }}
-                />
-                <Card 
-                  admin={
-                    {
-                      name:"Simge Arslan", 
-                      image:"simgearslan", 
-                      linkedin: "https://www.linkedin.com/in/simge-arslan-118947240/", 
-                      job: "Makine Öğrenmesi Komitesi Proje Sorumlusu",
-                      sum: ""
-                    }}
-                />
-                <Card 
-                  admin={
-                    {
-                      name:"Buğra Burak Başer", 
-                      image:"bugraburakbaser", 
-                      linkedin: "https://www.linkedin.com/in/bu%C4%9Fra-burak-ba%C5%9Fer-679b0523b/", 
-                      job: "Makine Öğrenmesi Komitesi Sosyal Medya Sorumlusu",
-                      sum: ""
-                    }}
-                />
-              </div>
-              
-              <div className={styles.second_cards}>
-                <Card 
-                  admin={
-                    {
-                      name:"Kubilay Küçük", 
-                      image:"kubilaykucuk", 
-                      linkedin: "https://www.linkedin.com/in/kubilay-k%C3%BC%C3%A7%C3%BCk-160689225/", 
-                      job: "Derin Öğrenme Komitesi Başkanı",
-                      sum: ""
-                    }}
-                />
-                <Card 
-                  admin={
-                    {
-                      name:"Yusuf Erkan", 
-                      image:"yusuferkan", 
-                      linkedin: "https://www.linkedin.com/in/yusuf-erkan-645348241/", 
-                      job: "Derin Öğrenme Komitesi Başkan Yardımcısı",
-                      sum: ""
-                    }}
-                />
-                <Card 
-                  admin={
-                    {
-                      name:"Mehmet Murat Köse", 
-                      image:"mehmetmuratkose", 
-                      linkedin: "https://www.linkedin.com/in/mehmet-murat-kose/", 
-                      job: "Derin Öğrenme Komitesi Proje Sorumlusu",
-                      sum: ""
-                    }}
-                />
-                <Card 
-                  admin={
-                    {
-                      name:"Ahmet Ergül", 
-                      image:"ahmetergul", 
-                      linkedin: "https://www.linkedin.com/in/ahmet-erg%C3%BCl-547b25224/", 
-                      job: "Derin Öğrenme Komitesi Proje Sorumlusu",
-                      sum: ""
-                    }}
-                />
-                <Card 
-                  admin={
-                    {
-                      name:"Bahadır Gökdemir", 
-                      image:"bahadirgokdemir", 
-                      linkedin: "/", 
-                      job: "Derin Öğrenme Komitesi Sosyal Medya Sorumlusu",
-                      sum: ""
-                    }}
-                />
-                
-                
-                {/* <div className={styles.aligner}></div> */}
-              </div>
-            </div>
-          </div>
+          <button
+            className={styles.button}
+            onClick={() => router.push("/komiteler")}
+          >
+            <p>TÜM EKİBİMİZİ TANIYIN</p>
+          </button>
         </div>
 
         {/* <div
@@ -545,16 +393,6 @@ export default function Home() {
             © Gazi Üniversitesi. Tüm hakları saklıdır.
           </p>
         </div>
-
-        {/* <input onChange={(e) => {setEmail(e.target.value)}}>
-        </input>
-        <button onClick={() => {
-          axios.post("https://yzt-backend.vercel.app/users/resetPassword", {
-            UserEmail: email,
-            DateNow: new Date(),
-            Expire: 3600000
-          }).then((e) => console.log(e)).catch(err=>console.log(err));
-        }}>gönder</button> */}
 
       </main>
 

@@ -406,7 +406,39 @@
   }
 }
 
+
+.button{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: "Work Sans";
+  color: white;
+  font-size: 20px;
+  letter-spacing: 4px;
+  border: 2px solid #EEC801;
+  width: 180px;
+  transition: .2s ease-in-out 0s;
+  margin-top: 50px;
+  width: 250px;
+  p{
+    margin: 0;
+    padding: 0;
+    margin: 0.5vw 0 0.5vw 0;
+  }
+}
+.button:hover{
+  transform: scale(1.05);
+  background-color: rgba(0, 0, 0, 0.152);
+}
+
+
 .admin_card_section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   h1{
     font-family: "Inter";
     font-weight: 400;
@@ -486,6 +518,12 @@
 }
 
 @media only screen and (max-width: 850px){
+  .button{
+    p{
+
+        margin: 1.9vh 0 1.9vh 0;
+    }
+  }
   .main{
     display: flex;
     flex-direction: column;
