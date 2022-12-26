@@ -56,7 +56,7 @@ const makine = [
     },
     {
         name:"Ebru Nur Uslu", 
-        image:"ebrunuuslu", 
+        image:"ebrunususlu", 
         linkedin: "https://www.linkedin.com/in/ebru-nur-u-a60163210/", 
         job: "Makine Öğrenmesi Komitesi Proje Sorumlusu",
         sum: ""
