@@ -9,7 +9,14 @@ const Card = ({admin, sum=false, setMouse = () =>{}, delMouse = () =>{}}) => {
     const [moreInfo, setMoreInfo] = useState(false);
 
   return (
-    <div className={styles.admincard} onMouseLeave={() => setMoreInfo(false)}>
+    <div 
+        className={styles.admincard} 
+        onMouseLeave={() => {
+            setMoreInfo(false); 
+            setMouse();
+        }} 
+        onMouseEnter={()=>{delMouse()}}
+    >
         <div className={styles.admincard__img}>
             <Image
                 layout="fill"
@@ -24,14 +31,15 @@ const Card = ({admin, sum=false, setMouse = () =>{}, delMouse = () =>{}}) => {
                 moreInfo ? 
                     <p>{admin.sum}</p>
                 :
-                    <div>
+                    <div
+                        // onMouseEnter={delMouse}
+                        // onMouseLeave={setMouse}
+                    >
                         <h2>{admin.name}</h2>
                         <a 
                             href={admin.linkedin} 
                             rel="noreferrer" 
                             target="_blank"
-                            onMouseEnter={delMouse}
-                            onMouseLeave={setMouse}
                         >
                             Linkedin
                         </a>

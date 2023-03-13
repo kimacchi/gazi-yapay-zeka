@@ -200,7 +200,7 @@ const iletisim = [
   {
     name: "Hande Bayrakçı",
     image: "handebayrakci",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/hande-bayrak%C3%A7%C4%B1-445a92248/",
     job: "İletişim Koordinatörü",
     sum: "",
   },
