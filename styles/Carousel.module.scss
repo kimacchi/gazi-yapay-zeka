@@ -19,6 +19,7 @@
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    color: white;
   }
   
   .card_container{
@@ -84,8 +85,13 @@
       background-color: #FFF;
       transform-origin: bottom right;
     }
+    .selected {
+      color: white;
+    }
+    .not_selected{
+      color: white;
+    }
   }
-
 
 
 @media screen and (max-width: 750px) {

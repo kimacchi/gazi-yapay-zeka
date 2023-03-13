@@ -321,37 +321,37 @@ export default function Carousel() {
       <div className={styles.trigger_buttons}>
         <button
           onClick={() => handleTrigger(yonetim)}
-          className={`${list === yonetim ? styles.selected : "not_selected"}`}
+          className={`${list === yonetim ? styles.selected : styles.not_selected}`}
         >
           Yönetim Kurulu
         </button>
         <button
           onClick={() => handleTrigger(makine)}
-          className={`${list === makine ? styles.selected : "not_selected"}`}
+          className={`${list === makine ? styles.selected : styles.not_selected}`}
         >
           Makine Öğrenmesi Komitesi
         </button>
         <button
           onClick={() => handleTrigger(derin)}
-          className={`${list === derin ? styles.selected : "not_selected"}`}
+          className={`${list === derin ? styles.selected : styles.not_selected}`}
         >
           Derin Öğrenme Komitesi
         </button>
         <button
           onClick={() => handleTrigger(sosyal)}
-          className={`${list === sosyal ? styles.selected : "not_selected"}`}
+          className={`${list === sosyal ? styles.selected : styles.not_selected}`}
         >
           Sosyal Medya Komitesi
         </button>
         <button
           onClick={() => handleTrigger(sponsor)}
-          className={`${list === sponsor ? styles.selected : "not_selected"}`}
+          className={`${list === sponsor ? styles.selected : styles.not_selected}`}
         >
           Sponsorluk ve Raporlama Komitesi
         </button>
         <button
           onClick={() => handleTrigger(iletisim)}
-          className={`${list === iletisim ? styles.selected : "not_selected"}`}
+          className={`${list === iletisim ? styles.selected : styles.not_selected}`}
         >
           İletişim Komitesi
         </button>
