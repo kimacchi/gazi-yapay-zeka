@@ -4,7 +4,7 @@ import Image from "next/image";
 import Less from "../public/less.svg";
 import More from "../public/more.svg";
 
-const Card = ({admin, sum=false}) => {
+const Card = ({admin, sum=false, setMouse = () =>{}, delMouse = () =>{}}) => {
 
     const [moreInfo, setMoreInfo] = useState(false);
 
@@ -26,7 +26,13 @@ const Card = ({admin, sum=false}) => {
                 :
                     <div>
                         <h2>{admin.name}</h2>
-                        <a href={admin.linkedin} rel="noreferrer" target="_blank">
+                        <a 
+                            href={admin.linkedin} 
+                            rel="noreferrer" 
+                            target="_blank"
+                            onMouseEnter={delMouse}
+                            onMouseLeave={setMouse}
+                        >
                             Linkedin
                         </a>
                         <p>{admin.job}</p>
@@ -35,7 +41,12 @@ const Card = ({admin, sum=false}) => {
             }
             {
                 sum ?
-                    <div className={styles.more_button} onClick={() => setMoreInfo((prev) => !prev)}>
+                    <div 
+                        className={styles.more_button} 
+                        onClick={() => setMoreInfo((prev) => !prev)}
+                        onMouseEnter={delMouse}
+                        onMouseLeave={setMouse}
+                    >
                         {
                             moreInfo ?
                             <Less />
