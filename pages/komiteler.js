@@ -199,7 +199,7 @@ const iletisim = [
   },
   {
     name: "Hande Bayrakçı",
-    image: "placeholder",
+    image: "handebayrakci",
     linkedin: "",
     job: "İletişim Koordinatörü",
     sum: "",
@@ -370,22 +370,23 @@ export default function Carousel() {
                 admin={e} 
                 setMouse={() => {
                   if (typeof window !== "undefined") {
-                    window.onmousedown = undefined;
-                    window.ontouchstart = undefined;
-                    window.onmouseup = undefined;
-                    window.ontouchend = undefined;
-                    window.onmousemove = undefined;
-                    window.ontouchmove = undefined;
-                  }
-                }}
-                delMouse={() => {
-                  if (typeof window !== "undefined") {
                     window.onmousedown = (e) => handleOnDown(e);
                     window.ontouchstart = (e) => handleOnDown(e.touches[0]);
                     window.onmouseup = (e) => handleOnUp(e);
                     window.ontouchend = (e) => handleOnUp(e.touches[0]);
                     window.onmousemove = (e) => handleOnMove(e);
                     window.ontouchmove = (e) => handleOnMove(e.touches[0]);
+                    
+                  }
+                }}
+                delMouse={() => {
+                  if (typeof window !== "undefined") {
+                    window.onmousedown = undefined;
+                    window.ontouchstart = undefined;
+                    window.onmouseup = undefined;
+                    window.ontouchend = undefined;
+                    window.onmousemove = undefined;
+                    window.ontouchmove = undefined;
                   }
                 }}
               />
