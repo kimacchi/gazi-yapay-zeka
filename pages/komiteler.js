@@ -351,7 +351,7 @@ export default function Carousel() {
         </button>
         <button
           onClick={() => handleTrigger(iletisim)}
-          className={`${list === web ? styles.selected : "not_selected"}`}
+          className={`${list === iletisim ? styles.selected : "not_selected"}`}
         >
           İletişim Komitesi
         </button>
