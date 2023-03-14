@@ -115,7 +115,7 @@ const sosyal = [
     name: "Beyza Beril Yalçınkaya",
     image: "beyzaberil",
     linkedin:
-      "https://www.linkedin.com/in/beyza-beril-yal%C3%A7%C4%B1nkaya-30a120228",
+      "https://www.linkedin.com/in/beyza-beril-y-30a120228/",
     job: "Tasarım Sorumlusu",
     sum: "",
   },
