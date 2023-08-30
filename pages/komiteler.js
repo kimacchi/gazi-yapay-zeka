@@ -8,11 +8,11 @@ import Navbar from "../components/navbar/Navbar";
 
 // storing the images in an array for convenience.
 
-const yonetim = [
+const denetim = [
   {
     name: "Dilara Çelik",
     linkedin: "https://www.linkedin.com/in/dilara-%C3%A7elik-93a1191b4/",
-    job: "Yönetim Kurulu Başkanı",
+    job: "Denetim Kurulu Üyesi",
     sum: "",
     image: "dilaracelik",
   },
@@ -20,32 +20,74 @@ const yonetim = [
     name: "Ümitcan Zanbak",
     image: "umitcanzanbak",
     linkedin: "https://www.linkedin.com/in/%C3%BCmitcan-zanbak-0745a11b3/",
-    job: "İç İlişkilerden Sorumlu Başkan Yardımcısı",
+    job: "Denetim Kurulu Üyesi",
     sum: "",
   },
-  {
-    name: "Yakup Can Özdemir",
-    image: "yakupcanozdemir",
-    linkedin: "https://www.linkedin.com/in/yakup-%C3%B6zdemir-ab9216224/",
-    job: "Dış İlişkilerden Sorumlu Başkan Yardımcısı",
-    sum: "",
-  },
+  
   {
     name: "Kürşat Erdoğan",
     image: "kursaterdogan",
     linkedin:
       "https://www.linkedin.com/in/k%C3%BCr%C5%9Fat-erdo%C4%9Fan-668a20235/",
-    job: "Genel Sekreter",
+    job: "Denetim Kurulu Üyesi",
+    sum: "",
+  },
+  {
+    name: "Bahadır Gökdemir",
+    image: "bahadirgokdemir",
+    linkedin:
+      "https://www.linkedin.com/in/bahad%C4%B1r-g%C3%B6kdemir-160b981b3/",
+    job: "Denetim Kurulu Üyesi",
+    sum: "",
+  },
+]
+
+const yonetim = [
+  {
+    name: "Yakup Can Özdemir",
+    image: "yakupcanozdemir",
+    linkedin: "https://www.linkedin.com/in/yakup-%C3%B6zdemir-ab9216224/",
+    job: "Yönetim Kurulu Başkanı",
+    sum: "",
+  },
+  {
+    name: "Buğra Burak Başer",
+    image: "bugraburakbaser",
+    linkedin:
+      "https://www.linkedin.com/in/bu%C4%9Fra-burak-ba%C5%9Fer-679b0523b/",
+    job: "İç İşlerden Sorumlu Başkan Yardımcısı",
+    sum: "",
+  },
+  {
+    name: "Nimet Öztürk",
+    image: "nimetozturk",
+    linkedin: "https://www.linkedin.com/in/nimet-%C3%B6zt%C3%BCrk-520631231",
+    job: "Dış İşlerden Sorumlu Başkan Yardımcısı",
+    sum: "",
+  },
+  {
+    name: "İlyas Yakup Pekgüç",
+    image: "ilyasyakuppekguc",
+    linkedin:
+      "https://www.linkedin.com/in/ilyas-yakup-pekg%C3%BC%C3%A7-283647223/",
+    job: "Eğitim ve Projelerden Sorumlu Başkan Yardımcısı",
+    sum: "",
+  },
+  {
+    name: "Ömer Erkan",
+    image: "omererkan",
+    linkedin: "https://www.linkedin.com/in/%C3%B6mer-erkan-50a805218",
+    job: "Genel Sekreter ve Finans Sorumlusu",
     sum: "",
   },
 ];
 
-const makine = [
+const egitim = [
   {
-    name: "Mert Aydoğan",
-    image: "mertaydogan",
-    linkedin: "https://www.linkedin.com/in/mert-aydo%C4%9Fan-2a42a4213/",
-    job: "Makine Öğrenmesi Komite Başkanı",
+    name: "Reyyan Temel",
+    image: "reyyantemel",
+    linkedin: "https://www.linkedin.com/in/reyyan-temel-845258219",
+    job: "Eğitim ve Proje Komitesi Başkanı",
     sum: "",
   },
   {
@@ -55,20 +97,7 @@ const makine = [
     job: "Makine Öğrenmesi Komite Başkan Yardımcısı",
     sum: "",
   },
-  {
-    name: "Ebru Nur Uslu",
-    image: "ebrunususlu",
-    linkedin: "https://www.linkedin.com/in/ebru-nur-u-a60163210/",
-    job: "Makine Öğrenmesi Komitesi Proje Sorumlusu",
-    sum: "",
-  },
-  {
-    name: "Reyyan Temel",
-    image: "reyyantemel",
-    linkedin: "https://www.linkedin.com/in/reyyan-temel-845258219",
-    job: "Makine Öğrenmesi Komitesi Raporlama Sorumlusu",
-    sum: "",
-  },
+  
 ];
 
 const derin = [
@@ -96,19 +125,12 @@ const derin = [
 ];
 
 const sosyal = [
-  {
-    name: "Buğra Burak Başer",
-    image: "bugraburakbaser",
-    linkedin:
-      "https://www.linkedin.com/in/bu%C4%9Fra-burak-ba%C5%9Fer-679b0523b/",
-    job: "Sosyal Medya Komitesi Başkanı",
-    sum: "",
-  },
+  
   {
     name: "Zeynep Aygün",
     image: "zeynepaygun",
     linkedin: "https://www.linkedin.com/in/zeynep-ayg%C3%BCn-2805a6218",
-    job: "Sosyal Medya Sorumlusu",
+    job: "Yürütme ve Sosyal Medya Komitesi Başkanı",
     sum: "",
   },
   {
@@ -145,18 +167,10 @@ const sosyal = [
 
 const sponsor = [
   {
-    name: "Bahadır Gökdemir",
-    image: "bahadirgokdemir",
-    linkedin:
-      "https://www.linkedin.com/in/bahad%C4%B1r-g%C3%B6kdemir-160b981b3/",
-    job: "Sponsorluk ve İletişim Komitesi Başkanı",
-    sum: "",
-  },
-  {
-    name: "Ömer Erkan",
-    image: "omererkan",
-    linkedin: "https://www.linkedin.com/in/%C3%B6mer-erkan-50a805218",
-    job: "Sponsorluk Sorumlusu",
+    name: "Ecem Dilara Karakuş",
+    image: "ecemdilarakarakus",
+    linkedin: "https://www.linkedin.com/in/ecem-dilara-karaku%C5%9F-5a5198235",
+    job: "Sponsorluk ve Raporlama Komitesi Başkanı",
     sum: "",
   },
   {
@@ -167,36 +181,16 @@ const sponsor = [
     sum: "",
   },
   {
-    name: "Ecem Dilara Karakuş",
-    image: "ecemdilarakarakus",
-    linkedin: "https://www.linkedin.com/in/ecem-dilara-karaku%C5%9F-5a5198235",
-    job: "Sponsorluk Sorumlusu",
-    sum: "",
-  },
-  {
     name: "Betül Altınsoy",
     image: "betulaltinsoy",
     linkedin: "https://www.linkedin.com/in/bet%C3%BCl-alt%C4%B1nsoy-ba528a265",
     job: "Sponsorluk Sorumlusu",
     sum: "",
   },
-  {
-    name: "Simge Arslan",
-    image: "simgearslan",
-    linkedin: "https://www.linkedin.com/in/simge-arslan-118947240/",
-    job: "Genel Raporlama Sorumlusu",
-    sum: "",
-  },
 ];
 
 const iletisim = [
-  {
-    name: "Nimet Öztürk",
-    image: "nimetozturk",
-    linkedin: "https://www.linkedin.com/in/nimet-%C3%B6zt%C3%BCrk-520631231",
-    job: "İletişim Komitesi Başkanı",
-    sum: "",
-  },
+  
   {
     name: "Hande Bayrakçı",
     image: "handebayrakci",
@@ -219,14 +213,7 @@ const iletisim = [
     sum: "",
   },
   
-  {
-    name: "İlyas Yakup Pekgüç",
-    image: "ilyasyakuppekguc",
-    linkedin:
-      "https://www.linkedin.com/in/ilyas-yakup-pekg%C3%BC%C3%A7-283647223/",
-    job: "İletişim Sorumlusu",
-    sum: "",
-  },
+  
   {
     name: "Ertan Soyalp",
     image: "ertansoyalp",
@@ -326,22 +313,23 @@ export default function Carousel() {
           Yönetim Kurulu
         </button>
         <button
-          onClick={() => handleTrigger(makine)}
-          className={`${list === makine ? styles.selected : styles.not_selected}`}
+          onClick={() => handleTrigger(denetim)}
+          className={`${list === denetim ? styles.selected : styles.not_selected}`}
         >
-          Makine Öğrenmesi Komitesi
+          Denetim Kurulu
         </button>
         <button
-          onClick={() => handleTrigger(derin)}
-          className={`${list === derin ? styles.selected : styles.not_selected}`}
+          onClick={() => handleTrigger(egitim)}
+          className={`${list === egitim ? styles.selected : styles.not_selected}`}
         >
-          Derin Öğrenme Komitesi
+          Eğitim ve Proje Komitesi
         </button>
+        
         <button
           onClick={() => handleTrigger(sosyal)}
           className={`${list === sosyal ? styles.selected : styles.not_selected}`}
         >
-          Sosyal Medya Komitesi
+          Yürütme ve Sosyal Medya Komitesi
         </button>
         <button
           onClick={() => handleTrigger(sponsor)}
