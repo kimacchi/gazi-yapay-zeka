@@ -91,41 +91,50 @@ const egitim = [
     sum: "",
   },
   {
-    name: "Ümit Emre İlhan",
-    image: "umitemreilhan",
-    linkedin: "https://www.linkedin.com/in/%C3%BCmit-emre-ilhan-791b93209/",
-    job: "Makine Öğrenmesi Komite Başkan Yardımcısı",
-    sum: "",
-  },
-  
-];
-
-const derin = [
-  {
-    name: "Mehmet Murat Köse",
-    image: "mehmetmuratkose",
-    linkedin: "https://www.linkedin.com/in/mehmet-murat-kose/",
-    job: "Derin Öğrenme Komitesi Başkanı",
+    name: "Yusuf Taha Sarıtiken",
+    image: "yusuftahasaritiken",
+    linkedin: "https://www.linkedin.com/in/yusuf-taha-sarıtiken-977694249/",
+    job: "Eğitim ve Proje Komitesi Başkan Yardımcısı",
     sum: "",
   },
   {
-    name: "Yusuf Erkan",
-    image: "yusuferkan",
-    linkedin: "https://www.linkedin.com/in/yusuf-erkan-645348241/",
-    job: "Derin Öğrenme Komitesi Başkan Yardımcısı",
+    name: "Feray Sevilmiş",
+    image: "feraysevilmis",
+    linkedin: "https://www.linkedin.com/in/feray-sevilmi%C5%9F-94a196215",
+    job: "Proje Sorumlusu",
     sum: "",
   },
   {
     name: "Sinem Çelik",
     image: "sinemcelik",
     linkedin: "https://www.linkedin.com/in/sinem-%C3%A7elik-b5b479209/",
-    job: "Derin Öğrenme Komitesi Raporlama Sorumlusu",
+    job: "Proje sorumlusu",
+    sum: "",
+  },
+  {
+    name: "İlhan Yılmaz Karadeniz",
+    image: "ilhanyilmazkaradeniz",
+    linkedin: "https://www.linkedin.com/in/ilhan-y%C4%B1lmaz-karadeniz-5abb77250",
+    job: "Proje Sorumlusu",
+    sum: "",
+  },
+  {
+    name: "Mahmut Enes Çevik",
+    image: "mahmutenes",
+    linkedin: "https://www.linkedin.com/in/mahmutenescevik/",
+    job: "Proje Sorumlusu",
+    sum: "",
+  },
+  {
+    name: "Turgay Ceylan",
+    image: "turgayceylan",
+    linkedin: "https://www.linkedin.com/in/turgayceylan",
+    job: "Eğitmen",
     sum: "",
   },
 ];
 
 const sosyal = [
-  
   {
     name: "Zeynep Aygün",
     image: "zeynepaygun",
@@ -134,35 +143,47 @@ const sosyal = [
     sum: "",
   },
   {
-    name: "Beyza Beril Yalçınkaya",
-    image: "beyzaberil",
-    linkedin:
-      "https://www.linkedin.com/in/beyza-beril-y-30a120228/",
-    job: "Tasarım Sorumlusu",
-    sum: "",
-  },
-  {
-    name: "Mahmut Enes Çevik",
-    image: "mahmutenes",
-    linkedin: "https://www.linkedin.com/in/mahmutenescevik/",
-    job: "Tasarım Sorumlusu",
+    name: "Kübranur Aktan",
+    image: "kubranuraktan",
+    linkedin: "https://www.linkedin.com/in/k%C3%BCbranur-aktan-a13182224",
+    job: "Yürütme ve Sosyal Medya Komitesi Başkan Yardımcısı",
     sum: "",
   },
   {
     name: "Fatemeh Jedari",
     image: "fatemehjedari",
     linkedin: "https://www.linkedin.com/in/fatemeh-jedari-sefidgari-003242206",
-    job: "Editör",
+    job: "Youtube Editörü",
     sum: "",
   },
   {
     name: "Ahmet Ergül",
     image: "ahmetergul",
     linkedin: "https://www.linkedin.com/in/ahmet-erg%C3%BCl-547b25224/",
-    job: "Web Sitesi Koordinatörü",
+    job: "Web Sorumlusu",
     sum: "",
   },
-  
+  {
+    name: "Havva Akşam",
+    image: "havvaaksam",
+    linkedin: "https://www.linkedin.com/in/havvaksm35",
+    job: "Tasarım Sorumlusu",
+    sum: "",
+  },
+  {
+    name: "Muhammet Akif Turan",
+    image: "muhammetakifturan",
+    linkedin: "https://www.linkedin.com/in/akif-turan-3337bb198/",
+    job: "Sosyal Medya Sorumlusu",
+    sum: "",
+  },
+  {
+    name: "Gülce Duru Koç",
+    image: "gulcedurukoc",
+    linkedin: "https://www.linkedin.com/in/gülce-duru-koç-510b46167/",
+    job: "Yürütme ve Planlama Sorumlusu",
+    sum: "",
+  },
 ];
 
 const sponsor = [
@@ -181,27 +202,48 @@ const sponsor = [
     sum: "",
   },
   {
-    name: "Betül Altınsoy",
-    image: "betulaltinsoy",
-    linkedin: "https://www.linkedin.com/in/bet%C3%BCl-alt%C4%B1nsoy-ba528a265",
+    name: "Ömer Faruk İlhan",
+    image: "omerfarukilhan",
+    linkedin: "https://www.linkedin.com/in/%C3%B6mer-faruk-ilhan-b115a9219",
     job: "Sponsorluk Sorumlusu",
+    sum: "",
+  },
+  {
+    name: "Emirhan Zileli",
+    image: "emirhanzileli",
+    linkedin: "https://www.linkedin.com/in/",
+    job: "Sponsorluk Sorumlusu",
+    sum: "",
+  },
+  {
+    name: "Alper Ağırman",
+    image: "alperagirman",
+    linkedin: "https://www.linkedin.com/in/",
+    job: "Sponsorluk Sorumlusu",
+    sum: "",
+  },
+  {
+    name: "Zülal Neda Özmen",
+    image: "zulalnedaozmen",
+    linkedin: "https://www.linkedin.com/in/",
+    job: "Raporlama Sorumlusu",
     sum: "",
   },
 ];
 
 const iletisim = [
-  
   {
-    name: "Hande Bayrakçı",
-    image: "handebayrakci",
-    linkedin: "https://www.linkedin.com/in/hande-bayrak%C3%A7%C4%B1-445a92248/",
-    job: "İletişim Koordinatörü",
+    name: "Beyza Beril Yalçınkaya",
+    image: "beyzaberil",
+    linkedin:
+      "https://www.linkedin.com/in/beyza-beril-y-30a120228/",
+    job: "İletişim Komitesi Komite Başkanı",
     sum: "",
   },
   {
-    name: "Sermina Özdilek",
-    image: "serminaozdilek",
-    linkedin: "https://www.linkedin.com/in/serminaozdilek",
+    name: "Yusuf Erkan",
+    image: "yusuferkan",
+    linkedin: "https://www.linkedin.com/in/yusuf-erkan-645348241/",
     job: "İletişim Sorumlusu",
     sum: "",
   },
@@ -212,8 +254,6 @@ const iletisim = [
     job: "İletişim Sorumlusu",
     sum: "",
   },
-  
-  
   {
     name: "Ertan Soyalp",
     image: "ertansoyalp",
@@ -221,7 +261,20 @@ const iletisim = [
     job: "İletişim Sorumlusu",
     sum: "",
   },
-  
+  {
+    name: "Berat Gümrükçü",
+    image: "beratgumrukcu",
+    linkedin: "https://www.linkedin.com/in/berat-g%C3%BCmr%C3%BCk%C3%A7%C3%BC-815a02188",
+    job: "İletişim Sorumlusu",
+    sum: "",
+  },
+  {
+    name: "Hülya Karagülle",
+    image: "hulyakaragulle",
+    linkedin: "https://www.linkedin.com/in/",
+    job: "İletişim Sorumlusu",
+    sum: "",
+  },  
 ];
 
 export default function Carousel() {
