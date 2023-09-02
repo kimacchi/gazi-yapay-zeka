@@ -7,6 +7,8 @@ import More from "../public/more.svg";
 const Card = ({admin, sum=false, setMouse = () =>{}, delMouse = () =>{}}) => {
 
     const [moreInfo, setMoreInfo] = useState(false);
+    const [url, setURL] = useState(admin.image)
+
 
   return (
     <div 
@@ -22,7 +24,10 @@ const Card = ({admin, sum=false, setMouse = () =>{}, delMouse = () =>{}}) => {
                 layout="fill"
                 objectFit="cover"
                 alt="yetkili"
-                src={`/images/cards/${admin.image}.jpeg`}
+                src={`/images/cards/${url}.jpeg`}
+                onError={() => {
+                  setURL("placeholder")
+                }}
                 className={styles.img}
             />
         </div>
