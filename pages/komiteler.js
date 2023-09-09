@@ -126,6 +126,13 @@ const egitim = [
     sum: "",
   },
   {
+    name: "Mehmet Mercimek",
+    image: "mehmetmercimek",
+    linkedin: "https://www.linkedin.com/in/mehmet-mercimek-084357273/",
+    job: "Proje Sorumlusu",
+    sum: "",
+  },
+  {
     name: "Turgay Ceylan",
     image: "turgayceylan",
     linkedin: "https://www.linkedin.com/in/turgayceylan",
@@ -211,21 +218,21 @@ const sponsor = [
   {
     name: "Emirhan Zileli",
     image: "emirhanzileli",
-    linkedin: "https://www.linkedin.com/in/",
+    linkedin: "https://www.linkedin.com/in/emirhan-zileli-99a39b219",
     job: "Sponsorluk Sorumlusu",
     sum: "",
   },
   {
     name: "Alper Ağırman",
     image: "alperagirman",
-    linkedin: "https://www.linkedin.com/in/",
+    linkedin: "https://www.linkedin.com/in/alper-ağırman-03a998245/",
     job: "Sponsorluk Sorumlusu",
     sum: "",
   },
   {
     name: "Zülal Neda Özmen",
     image: "zulalnedaozmen",
-    linkedin: "https://www.linkedin.com/in/",
+    linkedin: "https://www.linkedin.com/in/zülal-neda-özmen-195709254/",
     job: "Raporlama Sorumlusu",
     sum: "",
   },
@@ -271,7 +278,7 @@ const iletisim = [
   {
     name: "Hülya Karagülle",
     image: "hulyakaragulle",
-    linkedin: "https://www.linkedin.com/in/",
+    linkedin: "https://www.linkedin.com/in/hülya-karagülle-1b9396142/",
     job: "İletişim Sorumlusu",
     sum: "",
   },  
