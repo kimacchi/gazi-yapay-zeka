@@ -193,10 +193,11 @@ const RegisterComponent = ({ onTypeChange }) => {
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/gi;
     if (re.test(String(email).toLowerCase())) {
       try {
+        const idx = email.trim().indexOf("@");
         const record = await pb.collection("users").create({
           email: email.trim(),
           name: name.trim(),
-          username: email.trim(),
+          username: email.trim().slice(0, idx),
           emailVisibility: true,
           password: password.trim(),
           passwordConfirm: password.trim(),
